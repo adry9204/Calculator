@@ -92,7 +92,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="⌫">
+                                                <fragment content="+">
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -283,7 +283,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="+">
+                                                <fragment content="x">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="24" name="Helvetica"/>
@@ -305,6 +305,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-KW-eoq">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="VIz-Cg-pXo"/>
                                             <constraint firstAttribute="width" constant="60" id="wZv-mb-pLL"/>
@@ -376,11 +377,15 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="x">
+                                                <fragment content="÷">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <font key="NSFont" size="42" name="Times-Roman"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                            <tabStops/>
+                                                        </paragraphStyle>
+                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <real key="NSStrokeWidth" value="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -398,6 +403,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6N-DI-kK2">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.20000000000000001"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="LmR-OT-AfT"/>
                                             <constraint firstAttribute="width" constant="60" id="ZGR-cr-fkF"/>
@@ -427,11 +433,16 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="+/-">
+                                                <fragment content="⌫">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <font key="NSFont" size="38" name="LucidaGrande"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <font key="NSOriginalFont" size="12" name="Times-Roman"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                            <tabStops/>
+                                                        </paragraphStyle>
+                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <real key="NSStrokeWidth" value="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -448,11 +459,11 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="%">
+                                                <fragment content="+/-">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -469,7 +480,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="/">
+                                                <fragment content="%">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="24" name="Helvetica"/>
@@ -524,6 +535,26 @@
                     <connections>
                         <outlet property="CalculationLabel" destination="hTa-2c-vyl" id="kH5-qq-NFz"/>
                         <outlet property="ResultLabel" destination="PB0-VT-giZ" id="pvR-gS-s8a"/>
+                        <outlet property="add_Button" destination="kfs-oW-9Op" id="cbe-df-T4f"/>
+                        <outlet property="back_Button" destination="q5W-Kt-iY9" id="mzn-wE-PNq"/>
+                        <outlet property="clearAll_Button" destination="E6N-DI-kK2" id="DDQ-Wa-iGw"/>
+                        <outlet property="decimal_Button" destination="vvi-5S-Yjr" id="e7k-9d-Wip"/>
+                        <outlet property="divide_Button" destination="AOQ-Yy-jbs" id="Sgc-HD-0dF"/>
+                        <outlet property="equal_Button" destination="3Ma-e5-PaL" id="Rvk-8h-HUx"/>
+                        <outlet property="multiply_Button" destination="oig-Z5-TjJ" id="TCc-CI-AuE"/>
+                        <outlet property="numberEight_Button" destination="bIV-hg-nqX" id="q7W-b0-vgl"/>
+                        <outlet property="numberFive_Button" destination="FVo-JL-Lbx" id="Bya-lr-qnt"/>
+                        <outlet property="numberFour_Button" destination="wof-cw-J55" id="8ll-Uo-3LG"/>
+                        <outlet property="numberNine_Button" destination="6Iz-3A-HXF" id="vWj-y3-tfS"/>
+                        <outlet property="numberOne_Button" destination="Fj1-KW-eoq" id="P9u-Ne-9ju"/>
+                        <outlet property="numberSeven_Button" destination="thv-dw-zg1" id="rlR-ja-e7M"/>
+                        <outlet property="numberSix_Button" destination="eCs-uv-09W" id="RuX-li-zvZ"/>
+                        <outlet property="numberThree_Button" destination="g4T-p1-RUF" id="AdK-4u-bwr"/>
+                        <outlet property="numberTwo_Button" destination="2Nm-Ap-elF" id="Xnz-gk-uRX"/>
+                        <outlet property="numberZero_Button" destination="dkY-01-poZ" id="vc5-nN-Aqx"/>
+                        <outlet property="percent_Button" destination="1se-Ze-Epk" id="y8w-Sw-Ne7"/>
+                        <outlet property="plusMinus_Button" destination="bui-gI-iqL" id="tjX-gT-xmW"/>
+                        <outlet property="subtract_Button" destination="ToZ-PE-v6V" id="Im9-H1-3fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
