@@ -491,26 +491,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-2c-vyl">
+                                <rect key="frame" x="20" y="228.99999999999997" width="374" height="71.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xrh-PY-qGj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Rb-XZ-0hO"/>
                             <constraint firstItem="e9d-Yp-UvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Id-Zg-ESI"/>
+                            <constraint firstItem="PB0-VT-giZ" firstAttribute="top" secondItem="hTa-2c-vyl" secondAttribute="bottom" constant="-0.33333333333342807" id="Eyb-lw-m60"/>
                             <constraint firstItem="2mL-ci-Ol6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fbc-pn-1iu"/>
                             <constraint firstItem="PB0-VT-giZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M2R-Mu-CdO"/>
                             <constraint firstItem="e9d-Yp-UvN" firstAttribute="top" secondItem="xrh-PY-qGj" secondAttribute="bottom" constant="20" id="YyJ-Ja-jtw"/>
                             <constraint firstItem="pVX-Tk-MCu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zgn-4s-Bry"/>
                             <constraint firstItem="L2R-0B-UDY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cuO-gZ-wrG"/>
+                            <constraint firstItem="hTa-2c-vyl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dYN-Wm-drN"/>
                             <constraint firstItem="2mL-ci-Ol6" firstAttribute="top" secondItem="e9d-Yp-UvN" secondAttribute="bottom" constant="20" id="dwT-3i-aaN"/>
                             <constraint firstItem="pVX-Tk-MCu" firstAttribute="top" secondItem="PB0-VT-giZ" secondAttribute="bottom" constant="60" id="fXX-Za-sI6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PB0-VT-giZ" secondAttribute="trailing" constant="20" id="jub-M0-Wae"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2mL-ci-Ol6" secondAttribute="bottom" constant="50" id="m0f-2t-zcb"/>
                             <constraint firstItem="L2R-0B-UDY" firstAttribute="top" secondItem="pVX-Tk-MCu" secondAttribute="bottom" constant="20" id="obH-V2-hHq"/>
                             <constraint firstItem="xrh-PY-qGj" firstAttribute="top" secondItem="L2R-0B-UDY" secondAttribute="bottom" constant="20" id="otN-BN-yTv"/>
+                            <constraint firstItem="hTa-2c-vyl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pk2-gp-s8b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTa-2c-vyl" secondAttribute="trailing" constant="20" id="uT7-kb-pHc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CalculationLabel" destination="hTa-2c-vyl" id="kH5-qq-NFz"/>
                         <outlet property="ResultLabel" destination="PB0-VT-giZ" id="pvR-gS-s8a"/>
                     </connections>
                 </viewController>

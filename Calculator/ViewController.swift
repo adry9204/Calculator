@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var CalculationLabel: UILabel!
     @IBOutlet weak var ResultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
