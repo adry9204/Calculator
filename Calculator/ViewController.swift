@@ -82,6 +82,11 @@ class ViewController: UIViewController {
         
         
         
+        let image_top = UIImage(named: "top_pic")
+        let image_bottom = UIImage(named: "bottom_pic")
+    
+        
+        
     }
 
 
