@@ -31,7 +31,7 @@
                                             <constraint firstAttribute="height" constant="60" id="Laa-5E-rDw"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title=".">
+                                        <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -44,7 +44,7 @@
                                             <constraint firstAttribute="width" constant="60" id="mMq-Xf-g6G"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="0">
+                                        <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -57,7 +57,7 @@
                                             <constraint firstAttribute="height" constant="60" id="iM9-x8-d5n"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="=">
+                                        <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -70,7 +70,7 @@
                                             <constraint firstAttribute="height" constant="60" id="bzr-qk-OPZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                        <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="36"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,7 +92,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="7">
+                                        <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -105,7 +105,7 @@
                                             <constraint firstAttribute="width" constant="60" id="BXR-QD-CrC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="8">
+                                        <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -118,7 +118,7 @@
                                             <constraint firstAttribute="height" constant="60" id="E7p-vB-n4s"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="9">
+                                        <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -131,7 +131,7 @@
                                             <constraint firstAttribute="height" constant="60" id="uZQ-hV-MRA"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                        <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -153,7 +153,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="4">
+                                        <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -166,7 +166,7 @@
                                             <constraint firstAttribute="width" constant="60" id="S4v-Tg-4ai"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="5">
+                                        <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -179,7 +179,7 @@
                                             <constraint firstAttribute="height" constant="60" id="zx6-GZ-Bug"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="6">
+                                        <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -192,7 +192,7 @@
                                             <constraint firstAttribute="width" constant="60" id="F2W-WO-Yb1"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="x">
+                                        <buttonConfiguration key="configuration" style="filled" title="x" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -215,7 +215,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="1">
+                                        <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -228,7 +228,7 @@
                                             <constraint firstAttribute="height" constant="60" id="xac-cP-Cm9"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="2">
+                                        <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -241,7 +241,7 @@
                                             <constraint firstAttribute="height" constant="60" id="gP8-6e-jYv"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="3">
+                                        <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="large">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -254,7 +254,7 @@
                                             <constraint firstAttribute="width" constant="60" id="q0c-M5-nnc"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="÷">
+                                        <buttonConfiguration key="configuration" style="filled" title="÷" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -277,7 +277,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="C" subtitle="">
+                                        <buttonConfiguration key="configuration" style="filled" title="C" subtitle="" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -290,7 +290,7 @@
                                             <constraint firstAttribute="height" constant="60" id="oUC-ag-x8L"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="⌫">
+                                        <buttonConfiguration key="configuration" style="filled" title="⌫" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -303,7 +303,7 @@
                                             <constraint firstAttribute="height" constant="60" id="yL9-iT-cxy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="+/-">
+                                        <buttonConfiguration key="configuration" style="filled" title="+/-" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -316,7 +316,7 @@
                                             <constraint firstAttribute="width" constant="60" id="lPX-e8-fK3"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="%">
+                                        <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -384,26 +384,6 @@
                     <connections>
                         <outlet property="CalculationLabel" destination="hTa-2c-vyl" id="kH5-qq-NFz"/>
                         <outlet property="ResultLabel" destination="PB0-VT-giZ" id="pvR-gS-s8a"/>
-                        <outlet property="add_Button" destination="kfs-oW-9Op" id="cbe-df-T4f"/>
-                        <outlet property="back_Button" destination="q5W-Kt-iY9" id="mzn-wE-PNq"/>
-                        <outlet property="clearAll_Button" destination="E6N-DI-kK2" id="DDQ-Wa-iGw"/>
-                        <outlet property="decimal_Button" destination="vvi-5S-Yjr" id="e7k-9d-Wip"/>
-                        <outlet property="divide_Button" destination="AOQ-Yy-jbs" id="Sgc-HD-0dF"/>
-                        <outlet property="equal_Button" destination="3Ma-e5-PaL" id="Rvk-8h-HUx"/>
-                        <outlet property="multiply_Button" destination="oig-Z5-TjJ" id="TCc-CI-AuE"/>
-                        <outlet property="numberEight_Button" destination="bIV-hg-nqX" id="q7W-b0-vgl"/>
-                        <outlet property="numberFive_Button" destination="FVo-JL-Lbx" id="Bya-lr-qnt"/>
-                        <outlet property="numberFour_Button" destination="wof-cw-J55" id="8ll-Uo-3LG"/>
-                        <outlet property="numberNine_Button" destination="6Iz-3A-HXF" id="vWj-y3-tfS"/>
-                        <outlet property="numberOne_Button" destination="Fj1-KW-eoq" id="P9u-Ne-9ju"/>
-                        <outlet property="numberSeven_Button" destination="thv-dw-zg1" id="rlR-ja-e7M"/>
-                        <outlet property="numberSix_Button" destination="eCs-uv-09W" id="RuX-li-zvZ"/>
-                        <outlet property="numberThree_Button" destination="g4T-p1-RUF" id="AdK-4u-bwr"/>
-                        <outlet property="numberTwo_Button" destination="2Nm-Ap-elF" id="Xnz-gk-uRX"/>
-                        <outlet property="numberZero_Button" destination="dkY-01-poZ" id="vc5-nN-Aqx"/>
-                        <outlet property="percent_Button" destination="1se-Ze-Epk" id="y8w-Sw-Ne7"/>
-                        <outlet property="plusMinus_Button" destination="bui-gI-iqL" id="tjX-gT-xmW"/>
-                        <outlet property="subtract_Button" destination="ToZ-PE-v6V" id="Im9-H1-3fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
