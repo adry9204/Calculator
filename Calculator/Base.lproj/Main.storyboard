@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Amarante-Regular.ttf">
+            <string>Amarante-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2mL-ci-Ol6">
-                                <rect key="frame" x="39" y="706" width="336" height="60"/>
+                                <rect key="frame" x="39" y="722" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-5S-Yjr">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -27,19 +31,14 @@
                                             <constraint firstAttribute="height" constant="60" id="Laa-5E-rDw"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=".">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXt-ON-Y6C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkY-01-poZ">
                                         <rect key="frame" x="92" y="0.0" width="60" height="60"/>
@@ -48,19 +47,14 @@
                                             <constraint firstAttribute="width" constant="60" id="mMq-Xf-g6G"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="0">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XV4-A7-Nj8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-e5-PaL">
                                         <rect key="frame" x="184" y="0.0" width="60" height="60"/>
@@ -69,19 +63,14 @@
                                             <constraint firstAttribute="height" constant="60" id="iM9-x8-d5n"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="=">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYz-Cv-gZJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-oW-9Op">
                                         <rect key="frame" x="276" y="0.0" width="60" height="60"/>
@@ -90,24 +79,14 @@
                                             <constraint firstAttribute="height" constant="60" id="bzr-qk-OPZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+">
-                                                    <attributes>
-                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="36" name="LucidaGrande-Bold"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.12548999999999999" green="0.12941" blue="0.14118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="36"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfb-kS-wIX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -115,7 +94,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-Yp-UvN">
-                                <rect key="frame" x="39" y="626" width="336" height="60"/>
+                                <rect key="frame" x="39" y="642" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thv-dw-zg1">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -125,19 +104,14 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="7">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vzF-4Y-3xT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-hg-nqX">
                                         <rect key="frame" x="92" y="0.0" width="60" height="60"/>
@@ -146,19 +120,14 @@
                                             <constraint firstAttribute="width" constant="60" id="BXR-QD-CrC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="8">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwv-fD-rou"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iz-3A-HXF">
                                         <rect key="frame" x="184" y="0.0" width="60" height="60"/>
@@ -167,19 +136,14 @@
                                             <constraint firstAttribute="height" constant="60" id="E7p-vB-n4s"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="9">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SkT-yv-i6a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToZ-PE-v6V">
                                         <rect key="frame" x="276" y="0.0" width="60" height="60"/>
@@ -188,19 +152,14 @@
                                             <constraint firstAttribute="height" constant="60" id="uZQ-hV-MRA"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="-">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2OZ-2n-lXu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -208,7 +167,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-PY-qGj">
-                                <rect key="frame" x="39" y="546" width="336" height="60"/>
+                                <rect key="frame" x="39" y="562" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wof-cw-J55">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -218,19 +177,14 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="4">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPn-I9-KHI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVo-JL-Lbx">
                                         <rect key="frame" x="92" y="0.0" width="60" height="60"/>
@@ -239,19 +193,14 @@
                                             <constraint firstAttribute="width" constant="60" id="S4v-Tg-4ai"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="5">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMH-Gz-qWh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-uv-09W">
                                         <rect key="frame" x="184" y="0.0" width="60" height="60"/>
@@ -260,19 +209,14 @@
                                             <constraint firstAttribute="height" constant="60" id="zx6-GZ-Bug"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="6">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMB-0e-jyC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oig-Z5-TjJ">
                                         <rect key="frame" x="276" y="0.0" width="60" height="60"/>
@@ -281,19 +225,14 @@
                                             <constraint firstAttribute="width" constant="60" id="F2W-WO-Yb1"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="x">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="x" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egi-6P-uvd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -301,7 +240,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-0B-UDY">
-                                <rect key="frame" x="39" y="466" width="336" height="60"/>
+                                <rect key="frame" x="39" y="482" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-KW-eoq">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -312,19 +251,14 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="1">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7U-U4-nOS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nm-Ap-elF">
                                         <rect key="frame" x="92" y="0.0" width="60" height="60"/>
@@ -333,19 +267,14 @@
                                             <constraint firstAttribute="height" constant="60" id="xac-cP-Cm9"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="2">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kff-LF-7oz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4T-p1-RUF">
                                         <rect key="frame" x="184" y="0.0" width="60" height="60"/>
@@ -354,19 +283,14 @@
                                             <constraint firstAttribute="height" constant="60" id="gP8-6e-jYv"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="3">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="large">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5P-Mx-f3R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOQ-Yy-jbs">
                                         <rect key="frame" x="276" y="0.0" width="60" height="60"/>
@@ -375,23 +299,14 @@
                                             <constraint firstAttribute="width" constant="60" id="q0c-M5-nnc"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="÷">
-                                                    <attributes>
-                                                        <font key="NSFont" size="42" name="Times-Roman"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <real key="NSStrokeWidth" value="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="÷" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IY-Qw-Yt9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -399,7 +314,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-Tk-MCu">
-                                <rect key="frame" x="39" y="386" width="336" height="60"/>
+                                <rect key="frame" x="39" y="402" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6N-DI-kK2">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -410,19 +325,14 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="C">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="24" name="Amarante-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="C" subtitle="" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="EraseBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTf-gm-rbQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5W-Kt-iY9">
                                         <rect key="frame" x="92" y="0.0" width="60" height="60"/>
@@ -431,24 +341,14 @@
                                             <constraint firstAttribute="height" constant="60" id="oUC-ag-x8L"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="⌫">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="48"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <font key="NSOriginalFont" size="12" name="Times-Roman"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <real key="NSStrokeWidth" value="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="⌫" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="EraseBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmF-W8-ZIT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bui-gI-iqL">
                                         <rect key="frame" x="184" y="0.0" width="60" height="60"/>
@@ -457,19 +357,14 @@
                                             <constraint firstAttribute="height" constant="60" id="yL9-iT-cxy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+/-">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="+/-" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6lC-iA-5CZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1se-Ze-Epk">
                                         <rect key="frame" x="276" y="0.0" width="60" height="60"/>
@@ -478,19 +373,14 @@
                                             <constraint firstAttribute="width" constant="60" id="lPX-e8-fK3"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="%">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VnG-l9-VWt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -508,14 +398,14 @@
                                 <rect key="frame" x="20" y="790.66666666666663" width="374" height="71.333333333333371"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-VT-giZ">
-                                <rect key="frame" x="20" y="271" width="374" height="72.333333333333314"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="60"/>
+                                <rect key="frame" x="20" y="297" width="374" height="75"/>
+                                <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5+2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-2c-vyl">
-                                <rect key="frame" x="20" y="191" width="374" height="72.333333333333314"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="60"/>
+                                <rect key="frame" x="20" y="222" width="374" height="75"/>
+                                <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -527,7 +417,7 @@
                             <constraint firstItem="xrh-PY-qGj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Rb-XZ-0hO"/>
                             <constraint firstItem="e9d-Yp-UvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Id-Zg-ESI"/>
                             <constraint firstItem="4wF-hc-DLj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7un-cb-342"/>
-                            <constraint firstItem="PB0-VT-giZ" firstAttribute="top" secondItem="hTa-2c-vyl" secondAttribute="bottom" constant="7.6666666666666572" id="Eyb-lw-m60"/>
+                            <constraint firstItem="PB0-VT-giZ" firstAttribute="top" secondItem="hTa-2c-vyl" secondAttribute="bottom" id="Eyb-lw-m60"/>
                             <constraint firstItem="2mL-ci-Ol6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fbc-pn-1iu"/>
                             <constraint firstItem="MOx-gk-8aQ" firstAttribute="leading" secondItem="hTa-2c-vyl" secondAttribute="leading" id="FfL-Iy-OiG"/>
                             <constraint firstItem="PB0-VT-giZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M2R-Mu-CdO"/>
@@ -540,10 +430,10 @@
                             <constraint firstItem="hTa-2c-vyl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dYN-Wm-drN"/>
                             <constraint firstItem="2mL-ci-Ol6" firstAttribute="top" secondItem="e9d-Yp-UvN" secondAttribute="bottom" constant="20" id="dwT-3i-aaN"/>
                             <constraint firstItem="MOx-gk-8aQ" firstAttribute="trailing" secondItem="hTa-2c-vyl" secondAttribute="trailing" id="eVf-zJ-Sno"/>
-                            <constraint firstItem="pVX-Tk-MCu" firstAttribute="top" secondItem="PB0-VT-giZ" secondAttribute="bottom" constant="42.666666666666686" id="fXX-Za-sI6"/>
+                            <constraint firstItem="pVX-Tk-MCu" firstAttribute="top" secondItem="PB0-VT-giZ" secondAttribute="bottom" constant="30" id="fXX-Za-sI6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PB0-VT-giZ" secondAttribute="trailing" constant="20" id="jub-M0-Wae"/>
                             <constraint firstItem="MOx-gk-8aQ" firstAttribute="leading" secondItem="4wF-hc-DLj" secondAttribute="leading" id="lWy-51-ZBH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2mL-ci-Ol6" secondAttribute="bottom" constant="96" id="m0f-2t-zcb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2mL-ci-Ol6" secondAttribute="bottom" constant="80" id="m0f-2t-zcb"/>
                             <constraint firstItem="L2R-0B-UDY" firstAttribute="top" secondItem="pVX-Tk-MCu" secondAttribute="bottom" constant="20" id="obH-V2-hHq"/>
                             <constraint firstItem="xrh-PY-qGj" firstAttribute="top" secondItem="L2R-0B-UDY" secondAttribute="bottom" constant="20" id="otN-BN-yTv"/>
                             <constraint firstItem="hTa-2c-vyl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pk2-gp-s8b"/>
@@ -554,26 +444,6 @@
                     <connections>
                         <outlet property="CalculationLabel" destination="hTa-2c-vyl" id="kH5-qq-NFz"/>
                         <outlet property="ResultLabel" destination="PB0-VT-giZ" id="pvR-gS-s8a"/>
-                        <outlet property="add_Button" destination="kfs-oW-9Op" id="cbe-df-T4f"/>
-                        <outlet property="back_Button" destination="q5W-Kt-iY9" id="mzn-wE-PNq"/>
-                        <outlet property="clearAll_Button" destination="E6N-DI-kK2" id="DDQ-Wa-iGw"/>
-                        <outlet property="decimal_Button" destination="vvi-5S-Yjr" id="e7k-9d-Wip"/>
-                        <outlet property="divide_Button" destination="AOQ-Yy-jbs" id="Sgc-HD-0dF"/>
-                        <outlet property="equal_Button" destination="3Ma-e5-PaL" id="Rvk-8h-HUx"/>
-                        <outlet property="multiply_Button" destination="oig-Z5-TjJ" id="TCc-CI-AuE"/>
-                        <outlet property="numberEight_Button" destination="bIV-hg-nqX" id="q7W-b0-vgl"/>
-                        <outlet property="numberFive_Button" destination="FVo-JL-Lbx" id="Bya-lr-qnt"/>
-                        <outlet property="numberFour_Button" destination="wof-cw-J55" id="8ll-Uo-3LG"/>
-                        <outlet property="numberNine_Button" destination="6Iz-3A-HXF" id="vWj-y3-tfS"/>
-                        <outlet property="numberOne_Button" destination="Fj1-KW-eoq" id="P9u-Ne-9ju"/>
-                        <outlet property="numberSeven_Button" destination="thv-dw-zg1" id="rlR-ja-e7M"/>
-                        <outlet property="numberSix_Button" destination="eCs-uv-09W" id="RuX-li-zvZ"/>
-                        <outlet property="numberThree_Button" destination="g4T-p1-RUF" id="AdK-4u-bwr"/>
-                        <outlet property="numberTwo_Button" destination="2Nm-Ap-elF" id="Xnz-gk-uRX"/>
-                        <outlet property="numberZero_Button" destination="dkY-01-poZ" id="vc5-nN-Aqx"/>
-                        <outlet property="percent_Button" destination="1se-Ze-Epk" id="y8w-Sw-Ne7"/>
-                        <outlet property="plusMinus_Button" destination="bui-gI-iqL" id="tjX-gT-xmW"/>
-                        <outlet property="subtract_Button" destination="ToZ-PE-v6V" id="Im9-H1-3fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
