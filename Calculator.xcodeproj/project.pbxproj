@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289CEE0D28DD5ED900ACFDD1 /* Amarante-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 289CEE0B28DD5ED900ACFDD1 /* Amarante-Regular.ttf */; };
+		289CEE0E28DD5ED900ACFDD1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 289CEE0C28DD5ED900ACFDD1 /* OFL.txt */; };
 		28D8699D28DA610200647B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8699C28DA610200647B87 /* AppDelegate.swift */; };
 		28D8699F28DA610200647B87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8699E28DA610200647B87 /* SceneDelegate.swift */; };
 		28D869A128DA610200647B87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D869A028DA610200647B87 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289CEE0B28DD5ED900ACFDD1 /* Amarante-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amarante-Regular.ttf"; sourceTree = "<group>"; };
+		289CEE0C28DD5ED900ACFDD1 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		28D8699928DA610200647B87 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D8699C28DA610200647B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28D8699E28DA610200647B87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		289CEE0A28DD5ED900ACFDD1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				289CEE0B28DD5ED900ACFDD1 /* Amarante-Regular.ttf */,
+				289CEE0C28DD5ED900ACFDD1 /* OFL.txt */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		28D8699028DA610200647B87 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +75,7 @@
 				28D869A228DA610200647B87 /* Main.storyboard */,
 				28D869A528DA610400647B87 /* Assets.xcassets */,
 				28D869A728DA610400647B87 /* LaunchScreen.storyboard */,
+				289CEE0A28DD5ED900ACFDD1 /* fonts */,
 				28D869AA28DA610400647B87 /* Info.plist */,
 			);
 			path = Calculator;
@@ -125,6 +139,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289CEE0E28DD5ED900ACFDD1 /* OFL.txt in Resources */,
+				289CEE0D28DD5ED900ACFDD1 /* Amarante-Regular.ttf in Resources */,
 				28D869A928DA610400647B87 /* LaunchScreen.storyboard in Resources */,
 				28D869A628DA610400647B87 /* Assets.xcassets in Resources */,
 				28D869A428DA610200647B87 /* Main.storyboard in Resources */,

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Amarante-Regular.ttf">
+            <string>Amarante-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,16 +31,8 @@
                                             <constraint firstAttribute="height" constant="60" id="Laa-5E-rDw"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=".">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title=".">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -48,16 +44,8 @@
                                             <constraint firstAttribute="width" constant="60" id="mMq-Xf-g6G"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="0">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="0">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -69,16 +57,8 @@
                                             <constraint firstAttribute="height" constant="60" id="iM9-x8-d5n"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="=">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="=">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -90,21 +70,8 @@
                                             <constraint firstAttribute="height" constant="60" id="bzr-qk-OPZ"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+">
-                                                    <attributes>
-                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="36" name="LucidaGrande-Bold"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.12548999999999999" green="0.12941" blue="0.14118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="+">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="36"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -125,16 +92,8 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="7">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="7">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -146,16 +105,8 @@
                                             <constraint firstAttribute="width" constant="60" id="BXR-QD-CrC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="8">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="8">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -167,16 +118,8 @@
                                             <constraint firstAttribute="height" constant="60" id="E7p-vB-n4s"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="9">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="9">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -188,16 +131,8 @@
                                             <constraint firstAttribute="height" constant="60" id="uZQ-hV-MRA"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="-">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -218,16 +153,8 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="4">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="4">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -239,16 +166,8 @@
                                             <constraint firstAttribute="width" constant="60" id="S4v-Tg-4ai"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="5">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="5">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -260,16 +179,8 @@
                                             <constraint firstAttribute="height" constant="60" id="zx6-GZ-Bug"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="6">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="6">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -281,16 +192,8 @@
                                             <constraint firstAttribute="width" constant="60" id="F2W-WO-Yb1"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="x">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="x">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -312,16 +215,8 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="1">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="1">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -333,16 +228,8 @@
                                             <constraint firstAttribute="height" constant="60" id="xac-cP-Cm9"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="2">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="2">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -354,16 +241,8 @@
                                             <constraint firstAttribute="height" constant="60" id="gP8-6e-jYv"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="3">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="3">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -375,20 +254,8 @@
                                             <constraint firstAttribute="width" constant="60" id="q0c-M5-nnc"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="÷">
-                                                    <attributes>
-                                                        <font key="NSFont" size="42" name="Times-Roman"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <real key="NSStrokeWidth" value="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="÷">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -410,16 +277,8 @@
                                         </constraints>
                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="C">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="24" name="Amarante-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="C" subtitle="">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -431,21 +290,8 @@
                                             <constraint firstAttribute="height" constant="60" id="oUC-ag-x8L"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="⌫">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="48"/>
-                                                        <real key="NSKern" value="0.0"/>
-                                                        <font key="NSOriginalFont" size="12" name="Times-Roman"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                            <tabStops/>
-                                                        </paragraphStyle>
-                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <real key="NSStrokeWidth" value="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="⌫">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="32"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -457,16 +303,8 @@
                                             <constraint firstAttribute="height" constant="60" id="yL9-iT-cxy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="+/-">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="+/-">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -478,16 +316,8 @@
                                             <constraint firstAttribute="width" constant="60" id="lPX-e8-fK3"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="%">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="24" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="%">
+                                            <fontDescription key="titleFontDescription" name="Amarante-Regular" family="Amarante" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -508,14 +338,14 @@
                                 <rect key="frame" x="20" y="790.66666666666663" width="374" height="71.333333333333371"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-VT-giZ">
-                                <rect key="frame" x="20" y="271" width="374" height="72.333333333333314"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="60"/>
+                                <rect key="frame" x="20" y="268.33333333333331" width="374" height="75"/>
+                                <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5+2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-2c-vyl">
-                                <rect key="frame" x="20" y="191" width="374" height="72.333333333333314"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="60"/>
+                                <rect key="frame" x="20" y="185.66666666666666" width="374" height="74.999999999999972"/>
+                                <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

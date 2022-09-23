@@ -79,8 +79,8 @@ class ViewController: UIViewController {
         numberZero_Button.layer.masksToBounds = true
         decimal_Button.layer.cornerRadius = 15
         decimal_Button.layer.masksToBounds = true
-        
-        
+    
+        print(numberOne_Button.titleLabel?.font.familyName)
         
         let image_top = UIImage(named: "top_pic")
         let image_bottom = UIImage(named: "bottom_pic")
