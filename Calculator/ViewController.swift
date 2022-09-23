@@ -2,8 +2,17 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by Adriana Diaz Torres on 9/20/22.
-//
+/* Created and Developed by
+    Aurela Bala -
+    Adriana Diaz Torres - 301157161
+    Manmeen Kaur -
+    
+    Date Created: 20/09/2022
+    Simple Calculator App. It will implement all basic mathematical operations, as well as a Clear and Backspace button in portrait mode. In landscape mode, it will feature a scientific calculator. It has a custom design.
+ 
+ */
+
+
 
 import UIKit
 
