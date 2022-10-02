@@ -18,7 +18,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
     //Label outlets
     @IBOutlet weak var CalculationLabel: UILabel!
     @IBOutlet weak var ResultLabel: UILabel!
@@ -27,17 +27,53 @@ class ViewController: UIViewController {
     //App's Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     
+    func clearAll() {
+        CalculationLabel.text = "0"
+    }
+    
     
     //event handlers for when a button is pressed
-    @IBAction func EraseBttnPressed(_ sender: UIButton) {}
+    @IBAction func EraseBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        
+        switch (buttonText) {
+        case "C":
+        clearAll()
+           
+        default:
+            if(CalculationLabel.text!.count == 1)
+            {
+                CalculationLabel.text = "0"
+            }
+            else
+            {
+                CalculationLabel.text?.removeLast()
+            }
+        }
+        
+        
+    }
     
-    @IBAction func OperatorBttnPressed(_ sender: UIButton) {}
+   
     
-    @IBAction func NumberBttnPressed(_ sender: UIButton) {}
+    
+    @IBAction func OperatorBttnPressed(_ sender: UIButton)
+    {
+       
+    }
+    
+    
+    
+    @IBAction func NumberBttnPressed(_ sender: UIButton)
+    {
+       
+        
+    }
     
     
     
