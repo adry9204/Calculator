@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    
     func clearAll() {
         CalculationLabel.text = "0"
     }
