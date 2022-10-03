@@ -90,7 +90,39 @@ class ViewController: UIViewController {
     
     @IBAction func OperatorBttnPressed(_ sender: UIButton)
     {
-       
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        
+        switch (buttonText)
+        {
+        case "+":
+            calculation_operator = "+"
+            CalculationLabel.text?.append(calculation_operator)
+           
+        case "-":
+            calculation_operator = "-"
+            CalculationLabel.text?.append(calculation_operator)
+            
+        case "x":
+            calculation_operator = "x"
+            CalculationLabel.text?.append(calculation_operator)
+           
+        case "÷":
+            calculation_operator = "÷"
+            CalculationLabel.text?.append(calculation_operator)
+           
+        case "%":
+            calculation_operator = "%"
+            CalculationLabel.text?.append(calculation_operator)
+            
+        case "+/-":
+            calculation_operator = "+/-"
+            CalculationLabel.text?.append(calculation_operator)
+           
+        default:
+            haveCalculationOperator = true
+            
+        }
     }
     
     
