@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     var calculation_input: String = "0"
     var calculation_operator: String = ""
     var haveCalculationOperator: Bool = false
+    
     //Label outlets
     @IBOutlet weak var CalculationLabel: UILabel!
     @IBOutlet weak var ResultLabel: UILabel!
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    //clear all function
     func clearAll() {
         CalculationLabel.text = "0"
         ResultLabel.text = ""
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
         calculation_operator = ""
     }
     
+    //operator functions
     func add_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
                 return leftNumbers + rightNumbers
             }
@@ -61,7 +64,29 @@ class ViewController: UIViewController {
             }
     
     
-    //event handlers for when a button is pressed
+    //calculate function ( operators )
+    func calculate() {
+               switch (calculation_operator) {
+               case "+":
+                   result = add_calculate(leftNumbers, rightNumbers)
+               case "-":
+                   result = subtract_calculate(leftNumbers, rightNumbers)
+               case "x":
+                   result = multiply_calculate(leftNumbers, rightNumbers)
+               case "÷":
+                   result = divide_calculate(leftNumbers, rightNumbers)
+               case "%":
+                   result = percent_calculate(leftNumbers)
+               default:
+                   print("")
+               }
+               
+               haveLeftNumbers = false
+               haveRightNumbers = false
+               ResultLabel.text = String(result)
+           }
+    
+    //event handlers for when a button is pressed ( clear all or backbutton )
     @IBAction func EraseBttnPressed(_ sender: UIButton)
     {
         let button = sender as UIButton
@@ -87,7 +112,7 @@ class ViewController: UIViewController {
     
    
     
-    
+    //event handlers for when a button is pressed ( operators )
     @IBAction func OperatorBttnPressed(_ sender: UIButton)
     {
         let button = sender as UIButton
@@ -126,7 +151,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+    //event handlers for when a button is pressed ( numbers )
     @IBAction func NumberBttnPressed(_ sender: UIButton)
     {
        
