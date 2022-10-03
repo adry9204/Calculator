@@ -18,14 +18,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var result: Float = 0.0
-    var leftNumbers: Float = 0.0
-    var rightNumbers: Float = 0.0
-    var haveLeftNumbers: Bool = false
-    var haveRightNumbers: Bool = false
-    var calculation_input: String = "0"
     var calculation_operator: String = ""
-    var haveCalculationOperator: Bool = false
+    
     
     //Label outlets
     @IBOutlet weak var CalculationLabel: UILabel!
@@ -33,7 +27,8 @@ class ViewController: UIViewController {
     
     
     //App's Lifecycle
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     }
 
@@ -41,50 +36,14 @@ class ViewController: UIViewController {
     func clearAll() {
         CalculationLabel.text = "0"
         ResultLabel.text = ""
-        leftNumbers = 0.0
-        rightNumbers = 0.0
         calculation_operator = ""
+        
     }
     
-    //operator functions
-    func add_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
-                return leftNumbers + rightNumbers
-            }
-    func subtract_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
-                return leftNumbers - rightNumbers
-            }
-    func multiply_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
-                return leftNumbers * rightNumbers
-            }
-    func divide_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
-                return leftNumbers / rightNumbers
-            }
-    func percent_calculate(_ leftNumbers: Float) -> Float {
-                return leftNumbers / 100
-            }
+
     
     
-    //calculate function ( operators )
-    func calculate() {
-               switch (calculation_operator) {
-               case "+":
-                   result = add_calculate(leftNumbers, rightNumbers)
-               case "-":
-                   result = subtract_calculate(leftNumbers, rightNumbers)
-               case "x":
-                   result = multiply_calculate(leftNumbers, rightNumbers)
-               case "÷":
-                   result = divide_calculate(leftNumbers, rightNumbers)
-               case "%":
-                   result = percent_calculate(leftNumbers)
-               default:
-                   print("")
-               }
-               
-               haveLeftNumbers = false
-               haveRightNumbers = false
-               ResultLabel.text = String(result)
-           }
+   
     
     //event handlers for when a button is pressed ( clear all or backbutton )
     @IBAction func EraseBttnPressed(_ sender: UIButton)
@@ -118,9 +77,11 @@ class ViewController: UIViewController {
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
         
+        
         switch (buttonText)
         {
         case "+":
+
             calculation_operator = "+"
             CalculationLabel.text?.append(calculation_operator)
            
@@ -145,13 +106,11 @@ class ViewController: UIViewController {
             CalculationLabel.text?.append(calculation_operator)
             
         case "=":
-            if (haveLeftNumbers && haveRightNumbers)
-            {
-                calculate()
-            }
+           print("Do the calculation")
             
         default:
-            haveCalculationOperator = true
+           
+            print("Nan")
             
         }
     }
@@ -164,6 +123,7 @@ class ViewController: UIViewController {
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
                     
+        
         switch (buttonText)
         {
         case ".":
@@ -181,6 +141,7 @@ class ViewController: UIViewController {
             else
             {
                 CalculationLabel.text?.append(buttonText!)
+                
             }
             
         }
