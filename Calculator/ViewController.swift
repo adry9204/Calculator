@@ -143,7 +143,13 @@ class ViewController: UIViewController {
         case "+/-":
             calculation_operator = "+/-"
             CalculationLabel.text?.append(calculation_operator)
-           
+            
+        case "=":
+            if (haveLeftNumbers && haveRightNumbers)
+            {
+                calculate()
+            }
+            
         default:
             haveCalculationOperator = true
             
