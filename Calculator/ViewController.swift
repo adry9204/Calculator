@@ -18,7 +18,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
+    var result: Float = 0.0
+    var leftNumbers: Float = 0.0
+    var rightNumbers: Float = 0.0
+    var haveLeftNumbers: Bool = false
+    var haveRightNumbers: Bool = false
+    var calculation_input: String = "0"
+    var calculation_operator: String = ""
+    var haveCalculationOperator: Bool = false
     //Label outlets
     @IBOutlet weak var CalculationLabel: UILabel!
     @IBOutlet weak var ResultLabel: UILabel!
@@ -31,7 +38,27 @@ class ViewController: UIViewController {
 
     func clearAll() {
         CalculationLabel.text = "0"
+        ResultLabel.text = ""
+        leftNumbers = 0.0
+        rightNumbers = 0.0
+        calculation_operator = ""
     }
+    
+    func add_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
+                return leftNumbers + rightNumbers
+            }
+    func subtract_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
+                return leftNumbers - rightNumbers
+            }
+    func multiply_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
+                return leftNumbers * rightNumbers
+            }
+    func divide_calculate(_ leftNumbers: Float, _ rightNumbers: Float) -> Float {
+                return leftNumbers / rightNumbers
+            }
+    func percent_calculate(_ leftNumbers: Float) -> Float {
+                return leftNumbers / 100
+            }
     
     
     //event handlers for when a button is pressed
