@@ -71,6 +71,29 @@ class ViewController: UIViewController {
     @IBAction func NumberBttnPressed(_ sender: UIButton)
     {
        
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+                    
+        switch (buttonText)
+        {
+        case ".":
+            if(!CalculationLabel.text!.contains("."))
+            {
+                CalculationLabel.text?.append(buttonText!)
+            }
+            
+        default:
+            if(CalculationLabel.text == "0")
+            {
+                CalculationLabel.text = buttonText
+            }
+            
+            else
+            {
+                CalculationLabel.text?.append(buttonText!)
+            }
+            
+        }
         
     }
     
