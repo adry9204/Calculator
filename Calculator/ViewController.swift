@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabel.text?.last.map(String.init)
+        var result : Double = 0.0
         
         switch (buttonText)
         {
@@ -140,7 +141,11 @@ class ViewController: UIViewController {
             CalculationLabel.text?.append(calculation_operator)
 
         case "=":
-            print("do the calculation")
+            let expression = EvaluateExpression()
+            print(CalculationLabel.text!)
+
+            //result = expression(calcevaluate(calculation_expression: String(describing: CalculationLabel.text)))
+            ResultLabel.text = String(format: "%.8f", result)
 
         default:
             print("Nan")
