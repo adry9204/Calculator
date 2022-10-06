@@ -9,11 +9,9 @@
     
     Date Created: 20/09/2022
     Simple Calculator App. It will implement all basic mathematical operations, as well as a Clear and Backspace button in portrait mode. In landscape mode, it will feature a scientific calculator. It has a custom design.
-    Verion: 1.0.0
+    Version: 1.0.0
  
  */
-
-
 
 import UIKit
 
@@ -37,13 +35,8 @@ class ViewController: UIViewController {
         CalculationLabel.text = "0"
         ResultLabel.text = ""
         calculation_operator = ""
-        
     }
     
-
-    
-    
-   
     
     //event handlers for when a button is pressed ( clear all or backbutton )
     @IBAction func EraseBttnPressed(_ sender: UIButton)
@@ -65,8 +58,6 @@ class ViewController: UIViewController {
                 CalculationLabel.text?.removeLast()
             }
         }
-        
-        
     }
     
    
@@ -76,42 +67,83 @@ class ViewController: UIViewController {
     {
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
-        
+        let lastCharacter = CalculationLabel.text?.last.map(String.init)
         
         switch (buttonText)
         {
         case "+":
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            {
+                    calculation_operator = "+"
+                    CalculationLabel.text?.append(calculation_operator)
+            }
+            else {
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                {
+                    CalculationLabel.text?.removeLast()
+                    calculation_operator = "+"
+                    CalculationLabel.text?.append(calculation_operator)
+                }
+            }
 
-            calculation_operator = "+"
-            CalculationLabel.text?.append(calculation_operator)
-           
         case "-":
-            calculation_operator = "-"
-            CalculationLabel.text?.append(calculation_operator)
-            
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            {
+                    calculation_operator = "-"
+                    CalculationLabel.text?.append(calculation_operator)
+            }
+            else {
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                {
+                    CalculationLabel.text?.removeLast()
+                    calculation_operator = "-"
+                    CalculationLabel.text?.append(calculation_operator)
+                }
+            }
+
         case "x":
-            calculation_operator = "x"
-            CalculationLabel.text?.append(calculation_operator)
-           
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            {
+                    calculation_operator = "x"
+                    CalculationLabel.text?.append(calculation_operator)
+            }
+            else {
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                {
+                    CalculationLabel.text?.removeLast()
+                    calculation_operator = "x"
+                    CalculationLabel.text?.append(calculation_operator)
+                }
+            }
+
         case "÷":
-            calculation_operator = "÷"
-            CalculationLabel.text?.append(calculation_operator)
-           
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            {
+                    calculation_operator = "÷"
+                    CalculationLabel.text?.append(calculation_operator)
+            }
+            else {
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                {
+                    CalculationLabel.text?.removeLast()
+                    calculation_operator = "÷"
+                    CalculationLabel.text?.append(calculation_operator)
+                }
+            }
+
         case "%":
             calculation_operator = "%"
             CalculationLabel.text?.append(calculation_operator)
-            
+
         case "+/-":
             calculation_operator = "+/-"
             CalculationLabel.text?.append(calculation_operator)
-            
+
         case "=":
-           print("Do the calculation")
-            
+            print("do the calculation")
+
         default:
-           
             print("Nan")
-            
         }
     }
     
@@ -119,10 +151,8 @@ class ViewController: UIViewController {
     //event handlers for when a button is pressed ( numbers )
     @IBAction func NumberBttnPressed(_ sender: UIButton)
     {
-       
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
-                    
         
         switch (buttonText)
         {
@@ -143,12 +173,6 @@ class ViewController: UIViewController {
                 CalculationLabel.text?.append(buttonText!)
                 
             }
-            
         }
-        
     }
-    
-    
-    
 }
-
