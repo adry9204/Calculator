@@ -141,8 +141,8 @@ class ViewController: UIViewController {
             CalculationLabel.text?.append(calculation_operator)
 
         case "=":
-            let expression = EvaluateExpression()
             print(CalculationLabel.text!)
+            ExpressionEvaluator.Evaluate(expression: CalculationLabel.text!)
 
             //result = expression(calcevaluate(calculation_expression: String(describing: CalculationLabel.text)))
             ResultLabel.text = String(format: "%.8f", result)
