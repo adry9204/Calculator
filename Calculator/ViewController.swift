@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     //event handlers for when a button is pressed ( clear all or backbutton )
     @IBAction func EraseBttnPressed(_ sender: UIButton)
     {
+       
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
         
@@ -65,6 +66,9 @@ class ViewController: UIViewController {
     //event handlers for when a button is pressed ( operators )
     @IBAction func OperatorBttnPressed(_ sender: UIButton)
     {
+        if(CalculationLabel.text?.count == 16)
+        {    return }
+            
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabel.text?.last.map(String.init)
@@ -73,13 +77,13 @@ class ViewController: UIViewController {
         switch (buttonText)
         {
         case "+":
-            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "±"))
             {
                     calculation_operator = "+"
                     CalculationLabel.text?.append(calculation_operator)
             }
             else {
-                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±"))
                 {
                     CalculationLabel.text?.removeLast()
                     calculation_operator = "+"
@@ -88,13 +92,13 @@ class ViewController: UIViewController {
             }
 
         case "-":
-            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "±"))
             {
                     calculation_operator = "-"
                     CalculationLabel.text?.append(calculation_operator)
             }
             else {
-                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±"))
                 {
                     CalculationLabel.text?.removeLast()
                     calculation_operator = "-"
@@ -103,13 +107,13 @@ class ViewController: UIViewController {
             }
 
         case "x":
-            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "±"))
             {
                     calculation_operator = "x"
                     CalculationLabel.text?.append(calculation_operator)
             }
             else {
-                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±"))
                 {
                     CalculationLabel.text?.removeLast()
                     calculation_operator = "x"
@@ -118,13 +122,13 @@ class ViewController: UIViewController {
             }
 
         case "÷":
-            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "+/-"))
+            if ( calculation_operator == "" || (lastCharacter != "+" && lastCharacter != "-" && lastCharacter != "x" && lastCharacter != "÷" && lastCharacter != "%" && lastCharacter != "±"))
             {
                     calculation_operator = "÷"
                     CalculationLabel.text?.append(calculation_operator)
             }
             else {
-                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "+/-"))
+                if (lastCharacter == "+" || (lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±"))
                 {
                     CalculationLabel.text?.removeLast()
                     calculation_operator = "÷"
@@ -136,16 +140,13 @@ class ViewController: UIViewController {
             calculation_operator = "%"
             CalculationLabel.text?.append(calculation_operator)
 
-        case "+/-":
-            calculation_operator = "+/-"
+        case "±":
+            calculation_operator = "±"
             CalculationLabel.text?.append(calculation_operator)
 
         case "=":
             print(CalculationLabel.text!)
-            ExpressionEvaluator.Evaluate(expression: CalculationLabel.text!)
-
-            //result = expression(calcevaluate(calculation_expression: String(describing: CalculationLabel.text)))
-            ResultLabel.text = String(format: "%.8f", result)
+            ResultLabel.text = String( ExpressionEvaluator.Evaluate(expression: CalculationLabel.text!))
 
         default:
             print("Nan")
@@ -156,6 +157,9 @@ class ViewController: UIViewController {
     //event handlers for when a button is pressed ( numbers )
     @IBAction func NumberBttnPressed(_ sender: UIButton)
     {
+        if(CalculationLabel.text?.count == 16)
+        {    return }
+            
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
         
