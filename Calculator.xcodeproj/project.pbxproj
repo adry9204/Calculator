@@ -15,7 +15,7 @@
 		28D869A428DA610200647B87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D869A228DA610200647B87 /* Main.storyboard */; };
 		28D869A628DA610400647B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D869A528DA610400647B87 /* Assets.xcassets */; };
 		28D869A928DA610400647B87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D869A728DA610400647B87 /* LaunchScreen.storyboard */; };
-		A333AC2228EE034500478985 /* EvaluateExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333AC2128EE034500478985 /* EvaluateExpression.swift */; };
+		A333AC2228EE034500478985 /* ExpressionEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333AC2128EE034500478985 /* ExpressionEvaluator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		28D869A528DA610400647B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D869A828DA610400647B87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28D869AA28DA610400647B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A333AC2128EE034500478985 /* EvaluateExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateExpression.swift; sourceTree = "<group>"; };
+		A333AC2128EE034500478985 /* ExpressionEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionEvaluator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 				28D869A728DA610400647B87 /* LaunchScreen.storyboard */,
 				289CEE0A28DD5ED900ACFDD1 /* fonts */,
 				28D869AA28DA610400647B87 /* Info.plist */,
-				A333AC2128EE034500478985 /* EvaluateExpression.swift */,
+				A333AC2128EE034500478985 /* ExpressionEvaluator.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D869A128DA610200647B87 /* ViewController.swift in Sources */,
-				A333AC2228EE034500478985 /* EvaluateExpression.swift in Sources */,
+				A333AC2228EE034500478985 /* ExpressionEvaluator.swift in Sources */,
 				28D8699D28DA610200647B87 /* AppDelegate.swift in Sources */,
 				28D8699F28DA610200647B87 /* SceneDelegate.swift in Sources */,
 			);
