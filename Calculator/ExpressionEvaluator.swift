@@ -66,22 +66,22 @@ public class ExpressionEvaluator: UIViewController
         while index < dividends.count {
             switch operation {
             case Operations.Division:
-                print("/")
                 result = result / Double(dividends[index])!
             case Operations.Multiplication:
-                print("*")
                 result = result * Double(dividends[index])!
             case Operations.Addition:
-                print("+")
                 result = result + Double(dividends[index])!
             default:
-                print("-")
                 result = result - Double(dividends[index])!
             }
             
             index += 1
         }
         
+        //elimination the .0 from final string if result is INT
+        if(result.truncatingRemainder(dividingBy: 1) == 0) {
+            return String(Int(result))
+        }
         return String(result)
     }
     

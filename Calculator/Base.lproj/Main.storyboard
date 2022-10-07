@@ -69,7 +69,7 @@
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYz-Cv-gZJ"/>
+                                            <action selector="EqualBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVK-RP-B1K"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-oW-9Op">
