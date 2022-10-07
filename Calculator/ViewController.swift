@@ -70,6 +70,14 @@ class ViewController: UIViewController {
         
         //allow to exchange one binary operator for other
         if (buttonText == "+" || buttonText == "-" || buttonText == "x" || buttonText == "÷") {
+            
+            //first number is negative
+            if(CalculationLabel.text! == "0" && buttonText == "-") {
+                CalculationLabel.text = "-"
+                return
+            }
+            
+            
             if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷") {
                 CalculationLabel.text?.removeLast()
             }
@@ -92,7 +100,18 @@ class ViewController: UIViewController {
     //event handlers for when a Equal button is pressed
     //calculate the expression using our custom evaluator class
     @IBAction func EqualBttnPressed(_ sender: UIButton) {
-        ResultLabel.text = ExpressionEvaluator.Evaluate(expression: CalculationLabel.text!)
+        var expression = CalculationLabel.text!
+        
+        if(CalculationLabel.text!.first == "-"){
+            expression = "0" + expression
+        }
+        
+        if(expression.last == "+" || expression.last == "-" || expression.last == "*" || expression.last == "÷") {
+            expression.removeLast()
+            print(expression)
+            CalculationLabel.text!.removeLast()
+        }
+        ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression)
     }
     
     //Event handlers for when a button is pressed ( numbers )
