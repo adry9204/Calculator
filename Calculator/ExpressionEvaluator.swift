@@ -21,7 +21,6 @@ public class ExpressionEvaluator: UIViewController
     //main method of the ExpressionEvaluator class
     //it divides the expression by the operands and evaluate every single subexpression in the priority order
     static func Evaluate(expression: String) -> String {
-        
         var partialResult : Double = 0
         
         //Split by +
@@ -41,20 +40,20 @@ public class ExpressionEvaluator: UIViewController
                     let doubleDividends = ConvertToArrayOfDouble(origin: dividends)
                     
                     //Calculate divisions
-                    partialResult = ResolveSingleOperation(dividends: doubleDividends, operation: Operations.Division)
+                    partialResult = ResolveSingleOperation(operands: doubleDividends, operation: Operations.Division)
                     doubleMultipliers.append(partialResult)
                 }
                 //Calculate multiplications
-                partialResult = ResolveSingleOperation(dividends: doubleMultipliers, operation: Operations.Multiplication)
+                partialResult = ResolveSingleOperation(operands: doubleMultipliers, operation: Operations.Multiplication)
                 doubleSubtractors.append(partialResult)
             }
             //Calculate Subtractions
-            partialResult = ResolveSingleOperation(dividends: doubleSubtractors, operation: Operations.Subtraction)
+            partialResult = ResolveSingleOperation(operands: doubleSubtractors, operation: Operations.Subtraction)
             doubleAddends.append(partialResult)
         }
         
         //Calculate Additions
-        let result = ResolveSingleOperation(dividends: doubleAddends, operation: Operations.Addition)
+        let result = ResolveSingleOperation(operands: doubleAddends, operation: Operations.Addition)
         
         //elimination the .0 from final string if result is INT
         if(result.truncatingRemainder(dividingBy: 1) == 0) {
@@ -62,25 +61,27 @@ public class ExpressionEvaluator: UIViewController
         }
         return String(result)
         
+       
     }
     
     
+    
     //An auxiliar method that iterates on every item of a give array and performs a given operation
-    private static func ResolveSingleOperation(dividends: [Double], operation: Operations) -> Double {
-        var result  = dividends[0]
+    private static func ResolveSingleOperation(operands: [Double], operation: Operations) -> Double {
+        var result  = operands[0]
         var index = 1
         
         //iterate the array of strings and apply the corresponding operation to each of them
-        while index < dividends.count {
+        while index < operands.count {
             switch operation {
             case Operations.Division:
-                result = result / dividends[index]
+                result = result / operands[index]
             case Operations.Multiplication:
-                result = result * dividends[index]
+                result = result * operands[index]
             case Operations.Addition:
-                result = result + dividends[index]
+                result = result + operands[index]
             default:
-                result = result - dividends[index]
+                result = result - operands[index]
             }
             
             index += 1

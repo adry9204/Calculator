@@ -103,11 +103,15 @@ class ViewController: UIViewController {
         
         let button = sender as UIButton
         let buttonText = button.titleLabel?.text
+        let lastCharacter = CalculationLabel.text?.last.map(String.init)
+        
+        if (lastCharacter == "%" || lastCharacter == "±") {
+            return
+        }
         
         switch (buttonText)
         {
         case ".":
-            let lastCharacter = CalculationLabel.text?.last.map(String.init)
             if (lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "±" || lastCharacter == "%") {
                 CalculationLabel.text?.append("0.")
             } else {
@@ -129,6 +133,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //returns the las full number inputed in the label (78*3.6+78.03 --> 78.03)
     func lastNumber() -> String {
         var index = CalculationLabel.text!.count - 1
         let calculationLabelText: String = CalculationLabel.text!
@@ -140,7 +145,7 @@ class ViewController: UIViewController {
                 return result
             }
             
-            result += String(text[index])
+            result = String(text[index]) + result
             index -= 1
         }
         return result
