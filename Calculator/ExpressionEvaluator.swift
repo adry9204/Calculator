@@ -22,80 +22,94 @@ public class ExpressionEvaluator: UIViewController
     //it divides the expression by the operands and evaluate every single subexpression in the priority order
     static func Evaluate(expression: String) -> String {
         
-        var partialResult : String = ""
+        var partialResult : Double = 0
         
         //Split by +
         let addends = expression.split(separator: "+")
-        var stringAddends :[String] = []
+        var doubleAddends :[Double] = []
         for addend in addends {
             //Split by -
             let subtractors = addend.split(separator: "-")
-            var stringSubtractors : [String] = []
+            var doubleSubtractors : [Double] = []
             for subtractor in subtractors {
                 //Split by x
                 let multipliers = subtractor.split(separator: "x")
-                var stringMultipliers : [String] = []
+                var doubleMultipliers : [Double] = []
                 for multiplier in multipliers {
                     //Split by /
                     let dividends = multiplier.split(separator: "÷")
-                    let stringDividends = ConvertToStringArray(origin: dividends)
+                    let doubleDividends = ConvertToArrayOfDouble(origin: dividends)
+                    
                     //Calculate divisions
-                    partialResult = ResolveSingleOperation(dividends: stringDividends, operation: Operations.Division)
-                    stringMultipliers.append(partialResult)
+                    partialResult = ResolveSingleOperation(dividends: doubleDividends, operation: Operations.Division)
+                    doubleMultipliers.append(partialResult)
                 }
                 //Calculate multiplications
-                partialResult = ResolveSingleOperation(dividends: stringMultipliers, operation: Operations.Multiplication)
-                stringSubtractors.append(partialResult)
+                partialResult = ResolveSingleOperation(dividends: doubleMultipliers, operation: Operations.Multiplication)
+                doubleSubtractors.append(partialResult)
             }
             //Calculate Subtractions
-            partialResult = ResolveSingleOperation(dividends: stringSubtractors, operation: Operations.Subtraction)
-            stringAddends.append(partialResult)
+            partialResult = ResolveSingleOperation(dividends: doubleSubtractors, operation: Operations.Subtraction)
+            doubleAddends.append(partialResult)
         }
         
         //Calculate Additions
-        return ResolveSingleOperation(dividends: stringAddends, operation: Operations.Addition)
-    }
-    
-    
-    //An auxiliar method that iterates on every item of a give array and performs a given operation
-    private static func ResolveSingleOperation(dividends: [String], operation: Operations) -> String {
-        var result  = Double(dividends[0])!
-        var index = 1
-        
-        //iterate the array of strings and apply the corresponding operation to each of them
-        while index < dividends.count {
-            switch operation {
-            case Operations.Division:
-                result = result / Double(dividends[index])!
-            case Operations.Multiplication:
-                result = result * Double(dividends[index])!
-            case Operations.Addition:
-                result = result + Double(dividends[index])!
-            default:
-                result = result - Double(dividends[index])!
-            }
-            
-            index += 1
-        }
+        let result = ResolveSingleOperation(dividends: doubleAddends, operation: Operations.Addition)
         
         //elimination the .0 from final string if result is INT
         if(result.truncatingRemainder(dividingBy: 1) == 0) {
             return String(Int(result))
         }
         return String(result)
+        
+    }
+    
+    
+    //An auxiliar method that iterates on every item of a give array and performs a given operation
+    private static func ResolveSingleOperation(dividends: [Double], operation: Operations) -> Double {
+        var result  = dividends[0]
+        var index = 1
+        
+        //iterate the array of strings and apply the corresponding operation to each of them
+        while index < dividends.count {
+            switch operation {
+            case Operations.Division:
+                result = result / dividends[index]
+            case Operations.Multiplication:
+                result = result * dividends[index]
+            case Operations.Addition:
+                result = result + dividends[index]
+            default:
+                result = result - dividends[index]
+            }
+            
+            index += 1
+        }
+        
+        return result
     }
     
     
     //An auxiliar method that copies every element in a [Substring.SubSequence] in a new [String]
     //Is used after the operation "SplitBy(+)" to be able to acces every element in a more flexible format
-    static private func ConvertToStringArray(origin: [Substring.SubSequence]) -> [String] {
-        var strArray : [String] = []
+    static private func ConvertToArrayOfDouble(origin: [Substring.SubSequence]) -> [Double] {
+        var doubArray : [Double] = []
         
         for number in origin {
-            strArray.append(String(number))
+            if number.contains("±") {
+                var num = String(number)
+                num.removeLast()
+                doubArray.append(Double(num)! * (-1))
+            } else if number.contains("%") {
+                var num = String(number)
+                num.removeLast()
+                doubArray.append(Double(num)! / 100)
+            } else {
+            doubArray.append(Double(String(number))!)
+            }
         }
         
-        return strArray
+        return doubArray
     }
     
 }
