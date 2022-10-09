@@ -7,9 +7,11 @@
  Adriana Diaz Torres - 301157161
  Manmeen Kaur - 301259638
  
- Date Created: 20/09/2022
- Simple Calculator App. It will implement all basic mathematical operations, as well as a Clear and Backspace button in portrait mode. In landscape mode, it will feature a scientific calculator. It has a custom design.
- Version: 1.0.0
+ Date Created: 5/10/2022
+ Simple Calculator App. It performs all basic operation in accordance with the interface we implemented in version 1.0.0.
+    Addition, Subtraccion, Multiplication, Divition, Percentage and +/-, Clear and Backspace
+    It allows for combined operations, evaluating them according to the priority rules as well as several data format checks, such as preventing a number to be entered with 2 dots or a number that starts with 00000.
+ Version: 1.2.0
  
  */
 
@@ -102,11 +104,13 @@ class ViewController: UIViewController {
     @IBAction func EqualBttnPressed(_ sender: UIButton) {
         var expression = CalculationLabel.text!
         
+        //an expression that start with a negative number should be evaluated as 0-expressio
         if(CalculationLabel.text!.first == "-"){
             expression = "0" + expression
         }
         
-        if(expression.last == "+" || expression.last == "-" || expression.last == "*" || expression.last == "÷") {
+        //removing any unnecessary binary operators at the end of the expression before evaluate
+        if(expression.last == "+" || expression.last == "-" || expression.last == "x" || expression.last == "÷") {
             expression.removeLast()
             print(expression)
             CalculationLabel.text!.removeLast()
