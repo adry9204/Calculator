@@ -9,7 +9,9 @@
  Manmeen Kaur - 301259638
  
  Date Created: 05/10/2022
- 
+ Expression Evaluator for our Calculator app. This class handler all the calculation logic, while the ViewController takes care of the user interface.
+        It has a public method called calculator, used by the ViewController, as well as 2 auxiliar   methods to handle internal data processing.
+ Version:1.2.0
  */
 
 import Foundation
