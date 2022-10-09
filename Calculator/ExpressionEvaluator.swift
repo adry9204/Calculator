@@ -1,5 +1,5 @@
 //
-//  EvaluateExpression.swift
+//  ExpressionEvaluator.swift
 //  Calculator
 //
 /* Created and Developed by
@@ -10,7 +10,7 @@
  
  Date Created: 05/10/2022
  Expression Evaluator for our Calculator app. This class handler all the calculation logic, while the ViewController takes care of the user interface.
-        It has a public method called calculator, used by the ViewController, as well as 2 auxiliar   methods to handle internal data processing.
+        It has a public method called Evaluate, used by the ViewController, as well as 2 auxiliar   methods to handle internal data processing.
  Version:1.2.0
  */
 
