@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2mL-ci-Ol6">
-                                <rect key="frame" x="39" y="722" width="336" height="60"/>
+                                <rect key="frame" x="27" y="670" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-5S-Yjr">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -36,6 +37,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Itx-EQ-27S"/>
+                                                <exclude reference="Laa-5E-rDw"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Itx-EQ-27S"/>
+                                                <include reference="Laa-5E-rDw"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXt-ON-Y6C"/>
                                         </connections>
@@ -52,6 +65,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2Wm-Er-Whz"/>
+                                                <exclude reference="mMq-Xf-g6G"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="2Wm-Er-Whz"/>
+                                                <include reference="mMq-Xf-g6G"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XV4-A7-Nj8"/>
                                         </connections>
@@ -68,6 +93,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Nen-ol-ZhM"/>
+                                                <exclude reference="iM9-x8-d5n"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Nen-ol-ZhM"/>
+                                                <include reference="iM9-x8-d5n"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="EqualBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVK-RP-B1K"/>
                                         </connections>
@@ -84,6 +121,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OGp-fA-jVJ"/>
+                                                <exclude reference="bzr-qk-OPZ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="OGp-fA-jVJ"/>
+                                                <include reference="bzr-qk-OPZ"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfb-kS-wIX"/>
                                         </connections>
@@ -92,9 +141,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Tex-lB-gyF"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Tex-lB-gyF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Tex-lB-gyF"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-Yp-UvN">
-                                <rect key="frame" x="39" y="642" width="336" height="60"/>
+                                <rect key="frame" x="27" y="590" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thv-dw-zg1">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -109,6 +169,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MBl-d3-eE8"/>
+                                                <exclude reference="ywC-bX-JXI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="MBl-d3-eE8"/>
+                                                <include reference="ywC-bX-JXI"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vzF-4Y-3xT"/>
                                         </connections>
@@ -125,6 +197,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2Fs-oK-WX3"/>
+                                                <exclude reference="BXR-QD-CrC"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="2Fs-oK-WX3"/>
+                                                <include reference="BXR-QD-CrC"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwv-fD-rou"/>
                                         </connections>
@@ -141,6 +225,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="07v-xf-Rtd"/>
+                                                <exclude reference="E7p-vB-n4s"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="07v-xf-Rtd"/>
+                                                <include reference="E7p-vB-n4s"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SkT-yv-i6a"/>
                                         </connections>
@@ -157,6 +253,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Pgb-pQ-kGq"/>
+                                                <exclude reference="uZQ-hV-MRA"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Pgb-pQ-kGq"/>
+                                                <include reference="uZQ-hV-MRA"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2OZ-2n-lXu"/>
                                         </connections>
@@ -165,9 +273,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lGO-Fa-Ody"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lGO-Fa-Ody"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="lGO-Fa-Ody"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-PY-qGj">
-                                <rect key="frame" x="39" y="562" width="336" height="60"/>
+                                <rect key="frame" x="27" y="510" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wof-cw-J55">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -182,6 +301,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NwZ-GH-22L"/>
+                                                <exclude reference="Xd4-lW-WKa"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="NwZ-GH-22L"/>
+                                                <include reference="Xd4-lW-WKa"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPn-I9-KHI"/>
                                         </connections>
@@ -198,6 +329,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="0Lw-Hk-O5B"/>
+                                                <exclude reference="S4v-Tg-4ai"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="0Lw-Hk-O5B"/>
+                                                <include reference="S4v-Tg-4ai"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMH-Gz-qWh"/>
                                         </connections>
@@ -214,6 +357,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="V5l-BG-67w"/>
+                                                <exclude reference="zx6-GZ-Bug"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="V5l-BG-67w"/>
+                                                <include reference="zx6-GZ-Bug"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMB-0e-jyC"/>
                                         </connections>
@@ -230,6 +385,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="EAS-ha-D1r"/>
+                                                <exclude reference="F2W-WO-Yb1"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="EAS-ha-D1r"/>
+                                                <include reference="F2W-WO-Yb1"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egi-6P-uvd"/>
                                         </connections>
@@ -238,9 +405,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ZNq-wx-LWK"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZNq-wx-LWK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZNq-wx-LWK"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-0B-UDY">
-                                <rect key="frame" x="39" y="482" width="336" height="60"/>
+                                <rect key="frame" x="27" y="430" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-KW-eoq">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -256,6 +434,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="VIz-Cg-pXo"/>
+                                                <exclude reference="wZv-mb-pLL"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="VIz-Cg-pXo"/>
+                                                <include reference="wZv-mb-pLL"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7U-U4-nOS"/>
                                         </connections>
@@ -272,6 +462,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="h7w-b1-nED"/>
+                                                <exclude reference="xac-cP-Cm9"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="h7w-b1-nED"/>
+                                                <include reference="xac-cP-Cm9"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kff-LF-7oz"/>
                                         </connections>
@@ -288,6 +490,18 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.89803922179999995" green="0.83137255909999996" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="apJ-vR-EnS"/>
+                                                <exclude reference="gP8-6e-jYv"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="apJ-vR-EnS"/>
+                                                <include reference="gP8-6e-jYv"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="NumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5P-Mx-f3R"/>
                                         </connections>
@@ -304,6 +518,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="acN-Mj-X0Y"/>
+                                                <exclude reference="q0c-M5-nnc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="acN-Mj-X0Y"/>
+                                                <include reference="q0c-M5-nnc"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IY-Qw-Yt9"/>
                                         </connections>
@@ -312,9 +538,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ewk-f5-kME"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ewk-f5-kME"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ewk-f5-kME"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="pVX-Tk-MCu">
-                                <rect key="frame" x="39" y="402" width="336" height="60"/>
+                                <rect key="frame" x="27" y="350" width="336" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6N-DI-kK2">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -330,6 +567,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LmR-OT-AfT"/>
+                                                <exclude reference="ZGR-cr-fkF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="LmR-OT-AfT"/>
+                                                <include reference="ZGR-cr-fkF"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="EraseBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTf-gm-rbQ"/>
                                         </connections>
@@ -346,6 +595,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.67058825489999996" green="0.45098042490000001" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="cZB-sk-7LU"/>
+                                                <exclude reference="oUC-ag-x8L"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="cZB-sk-7LU"/>
+                                                <include reference="oUC-ag-x8L"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="EraseBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmF-W8-ZIT"/>
                                         </connections>
@@ -362,6 +623,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="I3N-1f-O5k"/>
+                                                <exclude reference="yL9-iT-cxy"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="I3N-1f-O5k"/>
+                                                <include reference="yL9-iT-cxy"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6lC-iA-5CZ"/>
                                         </connections>
@@ -378,6 +651,18 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.87058818339999999" green="0.43137252329999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ZtZ-d9-8na"/>
+                                                <exclude reference="lPX-e8-fK3"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="ZtZ-d9-8na"/>
+                                                <include reference="lPX-e8-fK3"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="OperatorBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VnG-l9-VWt"/>
                                         </connections>
@@ -386,28 +671,53 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9Ix-pb-i9T"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Ix-pb-i9T"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9Ix-pb-i9T"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_pic" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-gk-8aQ">
-                                <rect key="frame" x="20" y="44" width="374" height="74"/>
+                                <rect key="frame" x="20" y="47" width="350" height="74"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="pzK-dm-3eT"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pzK-dm-3eT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="pzK-dm-3eT"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_pic" translatesAutoresizingMaskIntoConstraints="NO" id="4wF-hc-DLj">
-                                <rect key="frame" x="20" y="790.66666666666663" width="374" height="71.333333333333371"/>
+                                <rect key="frame" x="20" y="738.66666666666663" width="350" height="71.333333333333371"/>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="40" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-VT-giZ">
-                                <rect key="frame" x="20" y="372" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="320" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-2c-vyl">
-                                <rect key="frame" x="20" y="297" width="374" height="75"/>
+                                <rect key="frame" x="20" y="245" width="350" height="75"/>
                                 <fontDescription key="fontDescription" name="Amarante-Regular" family="Amarante" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -438,6 +748,62 @@
                             <constraint firstItem="MOx-gk-8aQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q4j-FE-QDC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTa-2c-vyl" secondAttribute="trailing" constant="20" id="uT7-kb-pHc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V5N-I5-Q0T"/>
+                                <exclude reference="jub-M0-Wae"/>
+                                <exclude reference="m0f-2t-zcb"/>
+                                <exclude reference="uT7-kb-pHc"/>
+                                <exclude reference="Psf-4O-oCa"/>
+                                <exclude reference="lWy-51-ZBH"/>
+                                <exclude reference="q4j-FE-QDC"/>
+                                <exclude reference="dYN-Wm-drN"/>
+                                <exclude reference="pk2-gp-s8b"/>
+                                <exclude reference="Eyb-lw-m60"/>
+                                <exclude reference="M2R-Mu-CdO"/>
+                                <exclude reference="Zgn-4s-Bry"/>
+                                <exclude reference="fXX-Za-sI6"/>
+                                <exclude reference="cuO-gZ-wrG"/>
+                                <exclude reference="obH-V2-hHq"/>
+                                <exclude reference="5Rb-XZ-0hO"/>
+                                <exclude reference="otN-BN-yTv"/>
+                                <exclude reference="6Id-Zg-ESI"/>
+                                <exclude reference="YyJ-Ja-jtw"/>
+                                <exclude reference="Fbc-pn-1iu"/>
+                                <exclude reference="dwT-3i-aaN"/>
+                                <exclude reference="4vE-RM-hvU"/>
+                                <exclude reference="7un-cb-342"/>
+                                <exclude reference="WPC-Tk-05O"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="V5N-I5-Q0T"/>
+                                <include reference="jub-M0-Wae"/>
+                                <include reference="m0f-2t-zcb"/>
+                                <include reference="uT7-kb-pHc"/>
+                                <include reference="Psf-4O-oCa"/>
+                                <include reference="lWy-51-ZBH"/>
+                                <include reference="q4j-FE-QDC"/>
+                                <include reference="dYN-Wm-drN"/>
+                                <include reference="pk2-gp-s8b"/>
+                                <include reference="Eyb-lw-m60"/>
+                                <include reference="M2R-Mu-CdO"/>
+                                <include reference="Zgn-4s-Bry"/>
+                                <include reference="fXX-Za-sI6"/>
+                                <include reference="cuO-gZ-wrG"/>
+                                <include reference="obH-V2-hHq"/>
+                                <include reference="5Rb-XZ-0hO"/>
+                                <include reference="otN-BN-yTv"/>
+                                <include reference="6Id-Zg-ESI"/>
+                                <include reference="YyJ-Ja-jtw"/>
+                                <include reference="Fbc-pn-1iu"/>
+                                <include reference="dwT-3i-aaN"/>
+                                <include reference="4vE-RM-hvU"/>
+                                <include reference="7un-cb-342"/>
+                                <include reference="WPC-Tk-05O"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="CalculationLabel" destination="hTa-2c-vyl" id="kH5-qq-NFz"/>
