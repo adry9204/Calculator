@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        Tester.Test(expression: "9√")
     }
     
     //clear all function
