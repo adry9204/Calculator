@@ -107,6 +107,7 @@ public class ExpressionEvaluator: UIViewController
                 var num = String(number)
                 num.removeLast()
                 doubArray.append(Double(num)! / 100)
+                //squareroot added
             } else if number.contains("√"){
                 var num = String(number)
                 num.removeLast()

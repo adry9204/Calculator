@@ -7,6 +7,7 @@
 
 import Foundation
 
+//new tester function until Interface Integration stage
 class Tester {
     
     static func Test(expression: String) {
