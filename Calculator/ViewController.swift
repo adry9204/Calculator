@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     //Label outlets
     @IBOutlet weak var CalculationLabel: UILabel!
     @IBOutlet weak var ResultLabel: UILabel!
+    @IBOutlet weak var ResultLabelLandscape: UILabel!
+    @IBOutlet weak var CalculationLabelLandscape: UILabel!
     
     //App's Lifecycle
     override func viewDidLoad()
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
     func clearAll() {
         CalculationLabel.text = "0"
         ResultLabel.text = ""
+        CalculationLabelLandscape.text = "0"
+        ResultLabelLandscape.text = ""
     }
     
     
@@ -50,10 +54,13 @@ class ViewController: UIViewController {
             if(CalculationLabel.text!.count == 1)
             {
                 CalculationLabel.text = "0"
+                //CalculationLabelLandscape.text = "0"
             }
+            
             else
             {
                 CalculationLabel.text?.removeLast()
+                CalculationLabelLandscape.text?.removeLast()
             }
         }
     }
@@ -96,6 +103,9 @@ class ViewController: UIViewController {
         
         //add new character to calculation label
         CalculationLabel.text?.append(buttonText!)
+        
+        
+        
     }
     
     
@@ -137,10 +147,12 @@ class ViewController: UIViewController {
         case ".":
             if (lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "±" || lastCharacter == "%") {
                 CalculationLabel.text?.append("0.")
+                CalculationLabelLandscape.text?.append("0.")
             } else {
                 if(!lastNumber().contains("."))
                 {
                     CalculationLabel.text?.append(buttonText!)
+                    CalculationLabelLandscape.text?.append(buttonText!)
                 }
             }
         default:
@@ -148,12 +160,18 @@ class ViewController: UIViewController {
             if (lastNumber() == "0") {
                 CalculationLabel.text?.removeLast()
                 CalculationLabel.text?.append(buttonText!)
+                
+                CalculationLabelLandscape.text?.removeLast()
+                CalculationLabelLandscape.text?.append(buttonText!)
                 return
             }
             
             CalculationLabel.text?.append(buttonText!)
+            CalculationLabelLandscape.text?.append(buttonText!)
+            
 
         }
+        
     }
     
     //returns the las full number inputed in the label (78*3.6+78.03 --> 78.03)
