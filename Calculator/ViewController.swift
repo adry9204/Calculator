@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             if(CalculationLabel.text!.count == 1)
             {
                 CalculationLabel.text = "0"
-                //CalculationLabelLandscape.text = "0"
+                CalculationLabelLandscape.text = "0"
             }
             
             else
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     //event handlers for when a button is pressed ( operators )
     @IBAction func OperatorBttnPressed(_ sender: UIButton)
     {
-        if(CalculationLabel.text?.count == 16)
+        if((CalculationLabel.text?.count == 16) || ((CalculationLabelLandscape.text?.count == 16)))
         { return }
         
         let button = sender as UIButton
@@ -103,6 +103,7 @@ class ViewController: UIViewController {
         
         //add new character to calculation label
         CalculationLabel.text?.append(buttonText!)
+        CalculationLabelLandscape.text = CalculationLabel.text
         
         
         
@@ -126,6 +127,7 @@ class ViewController: UIViewController {
             CalculationLabel.text!.removeLast()
         }
         ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression)
+        ResultLabelLandscape.text = ResultLabel.text
     }
     
     //Event handlers for when a button is pressed ( numbers )
@@ -174,7 +176,7 @@ class ViewController: UIViewController {
         
     }
     
-    //returns the las full number inputed in the label (78*3.6+78.03 --> 78.03)
+    //returns the last full number inputed in the label (78*3.6+78.03 --> 78.03)
     func lastNumber() -> String {
         var index = CalculationLabel.text!.count - 1
         let calculationLabelText: String = CalculationLabel.text!
