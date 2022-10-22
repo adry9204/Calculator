@@ -30,8 +30,6 @@ public class ExpressionEvaluator: UIViewController
         var partialResult : Double = 0
         second = secondOperation
         rads = radianValues
-        var parenthesisCount = 0
-        
         
         
         //Split by +
