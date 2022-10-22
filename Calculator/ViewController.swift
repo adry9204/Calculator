@@ -27,9 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //temporary call
-        Tester.Test(expression: "9√")
-
+        //temporary testing calls
+        do {
+            try print(ExpressionEvaluator.Evaluate(expression: "20coh", radianValues: false, secondOperation: true ))
+            
+        } catch  {
+                print("Mine")
+        }
+        
     }
     
     //clear all function
@@ -118,7 +123,7 @@ class ViewController: UIViewController {
             print(expression)
             CalculationLabel.text!.removeLast()
         }
-        ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression)
+        //ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression)
     }
     
     //Event handlers for when a button is pressed ( numbers )
