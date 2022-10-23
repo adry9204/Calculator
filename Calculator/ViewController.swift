@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     
     
     var expression = ""
-    //var lastExpression = ""
+    var rad:Bool = false
+    var second:Bool = false
     
     
     
@@ -163,7 +164,7 @@ class ViewController: UIViewController {
             print(expression)
             CalculationLabel.text!.removeLast()
         }
-        try! ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression, radianValues: true, secondOperation: false)
+        try! ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression, radianValues: rad, secondOperation: second)
         ResultLabelLandscape.text = ResultLabel.text
     }
     
@@ -698,6 +699,47 @@ class ViewController: UIViewController {
     
         print(expression)
         
+    }
+    
+    
+    //event handlers when Rad button is pressed
+    @IBAction func radButtonPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        if(rad)
+        {
+            rad = false
+            button.backgroundColor = UIColor.clear
+        }
+        
+        else
+        {
+            rad = true
+            button.backgroundColor = UIColor.orange
+        }
+        
+        print(rad)
+    }
+    
+    
+    //event handlers when second button is pressed
+    @IBAction func secondBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        
+        if(second)
+        {
+            second = false
+            button.backgroundColor = UIColor.clear
+        }
+        
+        else
+        {
+            second = true
+            button.backgroundColor = UIColor.orange
+        }
+        
+        print(second)
     }
     
 }
