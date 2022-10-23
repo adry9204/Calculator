@@ -55,6 +55,9 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.80945809810000002" green="0.7515708968" blue="0.73629304979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="openParenthesisBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUM-Ud-uiq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB6-HX-uXx">
                                         <rect key="frame" x="71" y="0.0" width="60" height="39"/>
@@ -67,6 +70,9 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.80945809810000002" green="0.7515708968" blue="0.73629304979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeParenthesisBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOz-oq-Rth"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nee-FS-8fP">
                                         <rect key="frame" x="142" y="0.0" width="60" height="39"/>
@@ -1528,16 +1534,16 @@
                                 <exclude reference="hTa-2c-vyl"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Psf-4O-oCa"/>
+                                <exclude reference="lWy-51-ZBH"/>
+                                <exclude reference="q4j-FE-QDC"/>
                                 <exclude reference="V5N-I5-Q0T"/>
                                 <exclude reference="jub-M0-Wae"/>
                                 <exclude reference="m0f-2t-zcb"/>
                                 <exclude reference="uT7-kb-pHc"/>
-                                <exclude reference="Psf-4O-oCa"/>
-                                <exclude reference="lWy-51-ZBH"/>
-                                <exclude reference="q4j-FE-QDC"/>
-                                <exclude reference="dYN-Wm-drN"/>
                                 <exclude reference="Eyb-lw-m60"/>
                                 <exclude reference="M2R-Mu-CdO"/>
+                                <exclude reference="dYN-Wm-drN"/>
                                 <exclude reference="fXX-Za-sI6"/>
                                 <exclude reference="obH-V2-hHq"/>
                                 <exclude reference="otN-BN-yTv"/>
@@ -1567,16 +1573,16 @@
                                 <exclude reference="tqX-jd-NKa"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Psf-4O-oCa"/>
+                                <include reference="lWy-51-ZBH"/>
+                                <include reference="q4j-FE-QDC"/>
                                 <include reference="V5N-I5-Q0T"/>
                                 <include reference="jub-M0-Wae"/>
                                 <include reference="m0f-2t-zcb"/>
                                 <include reference="uT7-kb-pHc"/>
-                                <include reference="Psf-4O-oCa"/>
-                                <include reference="lWy-51-ZBH"/>
-                                <include reference="q4j-FE-QDC"/>
-                                <include reference="dYN-Wm-drN"/>
                                 <include reference="Eyb-lw-m60"/>
                                 <include reference="M2R-Mu-CdO"/>
+                                <include reference="dYN-Wm-drN"/>
                                 <include reference="fXX-Za-sI6"/>
                                 <include reference="obH-V2-hHq"/>
                                 <include reference="otN-BN-yTv"/>

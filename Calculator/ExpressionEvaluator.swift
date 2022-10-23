@@ -155,7 +155,7 @@ public class ExpressionEvaluator: UIViewController
                 var num = String(number)
                 num.removeLast()
                 doubArray.append(Double(num)!.squareRoot())
-            } else if number.contains("cr"){
+            } else if number.contains("a"){
                 var num = String(number)
                 num.removeLast()
                 doubArray.append(cbrt(Double(num)!))
@@ -163,14 +163,12 @@ public class ExpressionEvaluator: UIViewController
                 var num = String(number)
                 num.removeLast()
                 doubArray.append(1/Double(num)!)
-            } else if number.contains("ln"){
+            } else if number.contains("l"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 doubArray.append(log(Double(num)!))
-            } else if number.contains("lt"){
+            } else if number.contains("t"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 doubArray.append(log10(Double(num)!))
             } else if number.contains("!"){
@@ -183,31 +181,24 @@ public class ExpressionEvaluator: UIViewController
                 } else {
                     throw ExpressionErrors.FactorialDouble
                 }
-            } else if number.contains("sq"){
+            } else if number.contains("s"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 doubArray.append(Double(num)!*Double(num)!)
             } else if number.contains("b"){
                 var num = String(number)
                 num.removeLast()
                 doubArray.append(Double(num)!*Double(num)!*Double(num)!)
-            } else if number.contains("tp"){
+            } else if number.contains("c"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 doubArray.append(pow(10, Double(num)!))
-            } else if number.contains("epow"){
+            } else if number.contains("d"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 doubArray.append(pow(2.718281828459045, Double(num)!))
-            } else if number.contains("sin"){
+            } else if number.contains("g"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     if rads {
@@ -222,10 +213,8 @@ public class ExpressionEvaluator: UIViewController
                         doubArray.append(sin(Double(num)! * Double.pi / 180))
                     }
                 }
-            } else if number.contains("cos"){
+            } else if number.contains("h"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     if rads {
@@ -240,10 +229,8 @@ public class ExpressionEvaluator: UIViewController
                         doubArray.append(cos(Double(num)! * Double.pi / 180))
                     }
                 }
-            } else if number.contains("tan"){
+            } else if number.contains("i"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     if rads {
@@ -258,39 +245,33 @@ public class ExpressionEvaluator: UIViewController
                         doubArray.append(tan(Double(num)! * Double.pi / 180))
                     }
                 }
-            } else if number.contains("sih"){
+            } else if number.contains("j"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     doubArray.append(asinh(Double(num)!))
                 } else {
                     doubArray.append(sinh(Double(num)!))
                 }
-            } else if number.contains("coh"){
+            } else if number.contains("k"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     doubArray.append(acosh(Double(num)!))
                 } else {
                     doubArray.append(cosh(Double(num)!))
                 }
-            } else if number.contains("tah"){
+            } else if number.contains("o"){
                 var num = String(number)
-                num.removeLast()
-                num.removeLast()
                 num.removeLast()
                 if second {
                     doubArray.append(atanh(Double(num)!))
                 } else {
                     doubArray.append(tanh(Double(num)!))
                 }
-            } else if number.contains("eul"){
+            } else if number.contains("e"){
                 doubArray.append(2.718281828459045)
-            }else if number.contains("pi"){
+            }else if number.contains("p"){
                 doubArray.append(3.141592653589793)
             } else if number.contains("z"){
                 let nums = number
@@ -309,18 +290,16 @@ public class ExpressionEvaluator: UIViewController
                 doubArray.append(Double(x!)! * pow(10, Double(y!)!))
             } else if number.contains("R"){
                 doubArray.append(round(Double.random(in: 0.0...1.0) * 100) / 100)
-            } else if number.contains("mr"){
+            } else if number.contains("m"){
                 doubArray.append(mem)
-            } else if number.contains("mc"){
+            } else if number.contains("n"){
                 mem = 0.0
-            } else if number.contains("mp"){
+            } else if number.contains("q"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 mem += Double(num)!
-            } else if number.contains("mm"){
+            } else if number.contains("r"){
                 var num = String(number)
-                num.removeLast()
                 num.removeLast()
                 mem -= Double(num)!
             } else {
