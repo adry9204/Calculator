@@ -1363,6 +1363,9 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.80945809810000002" green="0.7515708968" blue="0.73629304979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="squareNumberBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAy-cZ-gKW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-yq-4Uv">
                                         <rect key="frame" x="142" y="0.0" width="60" height="38"/>
@@ -1375,6 +1378,9 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.80945809810000002" green="0.7515708968" blue="0.73629304979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cubeRootBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6O-U6-d9V"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLZ-Cs-GdT">
                                         <rect key="frame" x="213" y="0.0" width="60" height="38"/>
@@ -1387,6 +1393,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" red="0.80945809810000002" green="0.7515708968" blue="0.73629304979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="yRootBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S6p-xf-LEq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMh-3y-lQz">
                                         <rect key="frame" x="284" y="0.0" width="60" height="38"/>

@@ -622,6 +622,84 @@ class ViewController: UIViewController {
         print(expression)
     }
     
+    
+    //event handlers for square number button pressed
+    
+    @IBAction func squareNumberBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+           expression.append("s")
+           CalculationLabelLandscape.text?.append("^2")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+        
+    }
+    
+    
+    
+    
+    //event handlers for cube number button pressed
+    
+    @IBAction func cubeNumberBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+           expression.append("b")
+           CalculationLabelLandscape.text?.append("^3")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    //event handlers for y root button pressed
+    @IBAction func yRootBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+           expression.append("y")
+           CalculationLabelLandscape.text?.append("^")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+        
+    }
+    
 }
 
 
