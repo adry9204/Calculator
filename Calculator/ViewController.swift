@@ -35,6 +35,12 @@ class ViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //temporary testing calls
+      
+            try? print(ExpressionEvaluator.Evaluate(expression: "3+(1+2x(10÷5)+9z2)x2", radianValues: true, secondOperation: true))
+            
+       
+        
     }
     
     //clear all function
