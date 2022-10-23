@@ -1,18 +1,21 @@
 //
-//  ExpressionEvaluator.swift
+//  ViewController.swift
 //  Calculator
 //
 /* Created and Developed by
- 
- Adriana Diaz Torres - 301157161
  Aurela Bala - 301279255
+ Adriana Diaz Torres - 301157161
  Manmeen Kaur - 301259638
  
- Date Created: 05/10/2022
- Expression Evaluator for our Calculator app. This class handler all the calculation logic, while the ViewController takes care of the user interface.
-        It has a public method called Evaluate, used by the ViewController, as well as 2 auxiliar   methods to handle internal data processing.
- Version:1.2.0
+ Date Created: 5/10/2022
+ Date Updated: 23/10/2022
+Scientific Calculator App. It performs all operation in accordance with the interface we implemented in version 1.0.0. that has been updated to support 30 new operations on landscape mode
+    It allows for combined operations, evaluating them according to the priority rules as well as several data format checks, such as preventing a number to be entered with 2 dots or a number that starts with 00000. Parenthesis allow for priority changes and nested operations.
+ Exceptions are handled
+ Version: 1.3.0
+ 
  */
+
 
 import Foundation
 import UIKit
@@ -337,6 +340,7 @@ public class ExpressionEvaluator: UIViewController
         
     }
     
+    //geting the outer most expression for recursive evaluation
     private static func getInnerExpression(expression: String) -> String {
         var balance = 0
         var newExpression = ""

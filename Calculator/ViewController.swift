@@ -8,10 +8,10 @@
  Manmeen Kaur - 301259638
  
  Date Created: 5/10/2022
- Simple Calculator App. It performs all basic operation in accordance with the interface we implemented in version 1.0.0.
-    Addition, Subtraccion, Multiplication, Divition, Percentage and +/-, Clear and Backspace
-    It allows for combined operations, evaluating them according to the priority rules as well as several data format checks, such as preventing a number to be entered with 2 dots or a number that starts with 00000.
- Version: 1.2.0
+ Date Updated: 23/10/2022
+Scientific Calculator App. It performs all operation in accordance with the interface we implemented in version 1.0.0. that has been updated to support 30 new operations on landscape mode
+    It allows for combined operations, evaluating them according to the priority rules as well as several data format checks, such as preventing a number to be entered with 2 dots or a number that starts with 00000. Parenthesis allow for priority changes and nested operations
+ Version: 1.3.0
  
  */
 
@@ -28,12 +28,10 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         //temporary testing calls
-        do {
-            try print(ExpressionEvaluator.Evaluate(expression: "3+(1+2x(10÷5)+9z2)x2", radianValues: true, secondOperation: true))
+      
+            try? print(ExpressionEvaluator.Evaluate(expression: "3+(1+2x(10÷5)+9z2)x2", radianValues: true, secondOperation: true))
             
-        } catch  {
-                print("Mine")
-        }
+       
         
     }
     
