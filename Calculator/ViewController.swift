@@ -323,13 +323,13 @@ class ViewController: UIViewController {
             
         }
         
-        let numbers = Int(lastCharacter!)
-        //let lastCharacterString = String(lastCharacter)
-        if ((numbers != nil) == true || lastCharacter == ")" )  {
-           expression.append("o")
-           CalculationLabelLandscape.text?.append(buttonText!)
-           CalculationLabel.text = CalculationLabelLandscape.text
-  }
+//        let numbers = Int(lastCharacter!)
+//        //let lastCharacterString = String(lastCharacter)
+//        if ((numbers != nil) == true || lastCharacter == ")" )  {
+//           expression.append("o")
+//           CalculationLabelLandscape.text?.append(buttonText!)
+//           CalculationLabel.text = CalculationLabelLandscape.text
+//  }
     
         print(expression)
     }
