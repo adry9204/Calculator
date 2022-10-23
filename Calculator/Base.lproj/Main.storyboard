@@ -1217,6 +1217,9 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.85025670919999996" green="0.78945185549999997" blue="0.77340396870000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="squareRootBttnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OsC-SS-sy5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-J2-riB">
                                         <rect key="frame" x="142" y="0.0" width="60" height="39"/>
@@ -1602,7 +1605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="308"/>
+            <point key="canvasLocation" x="414" y="314"/>
         </scene>
     </scenes>
     <resources>

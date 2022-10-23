@@ -557,8 +557,8 @@ class ViewController: UIViewController {
            return
         }
 
-        let numbers = (Int(lastCharacter!))
-        if ((numbers != nil)  || lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±")
+        //let numbers = (Int(lastCharacter!))
+        if (lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%")
         {
            expression.append("(")
            CalculationLabelLandscape.text?.append(buttonText!)
@@ -582,17 +582,45 @@ class ViewController: UIViewController {
             return
         }
         
+        if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±")
+        {
+            return
+        }
+        
+       
+        else
+        {
+            expression.append(")")
+            CalculationLabelLandscape.text?.append(buttonText!)
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    //event handlers when square root button is pressed
+    @IBAction func squareRootBttnPressed(_ sender: UIButton)
+    {
+        let button = sender as UIButton
+        let buttonText = button.titleLabel?.text
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
         let numbers = (Int(lastCharacter!))
         if (numbers != nil)
         {
-           expression.append(")")
+           expression.append("√")
            CalculationLabelLandscape.text?.append(buttonText!)
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
         print(expression)
     }
-    
     
 }
 
