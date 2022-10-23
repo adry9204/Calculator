@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //temporary testing calls
         do {
-            try print(ExpressionEvaluator.Evaluate(expression: "20", radianValues: false, secondOperation: true ))
+            try print(ExpressionEvaluator.Evaluate(expression: "3+(1+2x(10÷5)+9z2)x2", radianValues: true, secondOperation: true))
             
         } catch  {
                 print("Mine")

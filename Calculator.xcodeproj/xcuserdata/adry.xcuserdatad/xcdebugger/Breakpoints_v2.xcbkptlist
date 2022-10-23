@@ -14,8 +14,8 @@
             filePath = "Calculator/ExpressionEvaluator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "ConvertToArrayOfDouble(origin:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Calculator/ExpressionEvaluator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "ConvertToArrayOfDouble(origin:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Calculator/ExpressionEvaluator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "ConvertToArrayOfDouble(origin:)"
             landmarkType = "7">
          </BreakpointContent>

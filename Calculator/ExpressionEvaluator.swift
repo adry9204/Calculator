@@ -23,14 +23,35 @@ public class ExpressionEvaluator: UIViewController
     private static var rads = false
     private static var second = false
     
+    //new method to find () and make sure they are balanced
+    static func Evaluate(expression: String, radianValues: Bool, secondOperation: Bool) throws -> String {
+        second = secondOperation
+        rads = radianValues
+        var solution = ""
+        
+        if expression.contains("(") {
+            let firstPos = expression.firstIndex(of: "(")
+            let subExpression = getInnerExpression(expression: String(expression.suffix(from: firstPos!)))
+            try solution = Evaluate(expression: subExpression, radianValues: radianValues, secondOperation: secondOperation)
+            //copying everything before + value + after the ()
+            var finalExpression = String(expression.prefix(upTo: firstPos!))
+            let suffixLength = expression.count - (finalExpression.count + (subExpression.count + 2))
+            finalExpression += solution
+            finalExpression += String(expression.suffix(suffixLength))
+            try solution = Evaluate(expression: finalExpression , radianValues: radianValues, secondOperation: secondOperation)
+            
+        } else {
+            try solution = Resolve(expression: expression)
+            
+        }
+     
+        return solution
+    }
     
     //main method of the ExpressionEvaluator class
     //it divides the expression by the operands and evaluate every single subexpression in the priority order
-    static func Evaluate(expression: String, radianValues: Bool, secondOperation: Bool) throws -> String {
+    static func Resolve(expression: String) throws -> String {
         var partialResult : Double = 0
-        second = secondOperation
-        rads = radianValues
-        
         
         //Split by +
         let addends = expression.split(separator: "+")
@@ -284,7 +305,7 @@ public class ExpressionEvaluator: UIViewController
                 let y = nums.split(separator: "E").last
                 doubArray.append(Double(x!)! * pow(10, Double(y!)!))
             } else if number.contains("R"){
-                doubArray.append(drand48())
+                doubArray.append(round(Double.random(in: 0.0...1.0) * 100) / 100)
             } else if number.contains("mr"){
                 doubArray.append(mem)
             } else if number.contains("mc"){
@@ -314,6 +335,29 @@ public class ExpressionEvaluator: UIViewController
         
         return number * FactorialCalculator(number: number - 1)
         
+    }
+    
+    private static func getInnerExpression(expression: String) -> String {
+        var balance = 0
+        var newExpression = ""
+        
+        for character in expression {
+            if character == "(" {
+                balance += 1
+            } else if character == ")" {
+                balance -= 1
+            }
+            
+            newExpression += String(character)
+            
+            if balance == 0 {
+                break
+            }
+        }
+        
+        newExpression.removeFirst()
+        newExpression.removeLast()
+        return newExpression
     }
     
 }
