@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             }
         }
         
-        print(expression)
+    
     }
     
     
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
             CalculationLabel.text?.append(buttonText!)
             CalculationLabelLandscape.text = CalculationLabel.text
             expression.append(buttonText!)
-            print(expression)
+          
         }
 
         if(isOperationAllowed() && (buttonText == "%" || buttonText == "±"))
@@ -135,7 +135,7 @@ class ViewController: UIViewController {
             CalculationLabel.text?.append(buttonText!)
             CalculationLabelLandscape.text = CalculationLabel.text
             expression.append(buttonText!)
-            print(expression)
+          
         }
         
        
@@ -176,7 +176,7 @@ class ViewController: UIViewController {
         try! ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression, radianValues: rad, secondOperation: second)
         ResultLabelLandscape.text = ResultLabel.text
         
-        print(expression)
+       
     }
     
     
@@ -221,7 +221,7 @@ class ViewController: UIViewController {
                 CalculationLabelLandscape.text?.removeLast()
                 CalculationLabelLandscape.text?.append(buttonText!)
                 expression = CalculationLabel.text!
-                print(expression)
+              
                 return
             }
             
@@ -235,7 +235,7 @@ class ViewController: UIViewController {
 //            CalculationLabelLandscape.text?.append(buttonText!)
 //            expression.append(buttonText!)
         }
-        print(expression)
+       
         
     }
     
@@ -288,17 +288,17 @@ class ViewController: UIViewController {
             CalculationLabelLandscape.text = "π"
             CalculationLabel.text = CalculationLabelLandscape.text
             expression += "p"
-            //print(expression)
+           
             
         }
         
-        if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷"  || lastCharacter == "±")
+        if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷"  || lastCharacter == "±" || lastCharacter == "(")
         {
             expression += "p"
             CalculationLabelLandscape.text?.append(buttonText!)
             CalculationLabel.text = CalculationLabelLandscape.text
         }
-        print(expression)
+       
             
     }
     
@@ -326,7 +326,7 @@ class ViewController: UIViewController {
             CalculationLabel.text = CalculationLabelLandscape.text
         }
         
-        print(expression)
+        
     }
     
     
@@ -366,7 +366,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
 
-        print(expression)
+       
     }
     
     
@@ -405,7 +405,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+      
         
     }
     
@@ -446,7 +446,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
         
     }
     
@@ -487,7 +487,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
         
-        print(expression)
+     
     }
     
     //Event handlers when cos button is pressed
@@ -526,7 +526,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -565,7 +565,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -588,7 +588,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+      
     }
     
     
@@ -617,7 +617,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -647,7 +647,7 @@ class ViewController: UIViewController {
             CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -678,7 +678,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -701,7 +701,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+      
         
     }
     
@@ -727,7 +727,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+      
     }
     
     
@@ -749,7 +749,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+      
         
     }
     
@@ -817,7 +817,6 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
    
     }
     
@@ -841,7 +840,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+     
     }
     
     //event handlers when 10^x button is pressed
@@ -864,7 +863,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -887,7 +886,7 @@ class ViewController: UIViewController {
             CalculationLabel.text = CalculationLabelLandscape.text
         }
         
-        print(expression)
+     
         
     }
     
@@ -910,7 +909,7 @@ class ViewController: UIViewController {
             CalculationLabel.text = CalculationLabelLandscape.text
         }
         
-        print(expression)
+      
     }
     
     //event handlers for ln button pressed
@@ -932,7 +931,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+       
     }
     
     
@@ -955,7 +954,6 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
     }
     
     
@@ -978,7 +976,7 @@ class ViewController: UIViewController {
            CalculationLabel.text = CalculationLabelLandscape.text
         }
     
-        print(expression)
+     
     }
     
     
@@ -1001,7 +999,7 @@ class ViewController: UIViewController {
             CalculationLabel.text = CalculationLabelLandscape.text
         }
         
-        print(expression)
+     
     }
     
     
