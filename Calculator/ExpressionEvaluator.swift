@@ -32,6 +32,13 @@ public class ExpressionEvaluator: UIViewController
         rads = radianValues
         var solution = ""
         
+        var openParenthesis = countCharacters(char: "(", text: expression)
+                var closeParenthesis = countCharacters(char: ")", text: expression)
+                
+                if openParenthesis != closeParenthesis {
+                    return "Incorrect Parenthesis"
+                }
+        
         if expression.contains("(") {
             let firstPos = expression.firstIndex(of: "(")
             let subExpression = getInnerExpression(expression: String(expression.suffix(from: firstPos!)))
@@ -343,7 +350,21 @@ public class ExpressionEvaluator: UIViewController
         return newExpression
     }
     
+    
+    private static func countCharacters(char: Character, text: String) -> Int
+    {
+            var total = 0
+            for character in text {
+                if char ==  character{
+                    total += 1
+                }
+            }
+            
+            return total
+        }
+    
 }
+
 
 
 //little enum used only to make refercences to certain operations more intuitive

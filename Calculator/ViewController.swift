@@ -71,8 +71,15 @@ class ViewController: UIViewController {
             
             else
             {
-                CalculationLabel.text?.removeLast()
-                CalculationLabelLandscape.text?.removeLast()
+                //CalculationLabel.text?.removeLast()
+                //CalculationLabelLandscape.text?.removeLast()
+                
+                let lastCharacterOfExpression = expression.last
+                let amount = getAmountofCharacters(lastOperation: lastCharacterOfExpression!)
+                expression.removeLast()
+                CalculationLabel.text?.removeLast(amount)
+                CalculationLabelLandscape.text = CalculationLabel.text
+
             }
         }
         
@@ -111,7 +118,7 @@ class ViewController: UIViewController {
             
             //allow to exchange one unary operator for other
             //avoid the case of unary operator behind binary operator
-            if(!isOperationAllowed() && ((buttonText == "+" && lastCharacter == "(" ) || (buttonText == "-" && lastCharacter == "(")  || (buttonText == "x" && lastCharacter == "(") || (buttonText == "÷" && lastCharacter == "(") ) )
+            if(   !isOperationAllowed() && ( (buttonText == "+" && (lastCharacter == "(" ) || lastCharacter == "E" || lastCharacter == "q") || (buttonText == "-" && lastCharacter == "(")  || (buttonText == "x" && lastCharacter == "(") || (buttonText == "÷" && lastCharacter == "(")  )   )
             {
                 return
             }
@@ -130,6 +137,8 @@ class ViewController: UIViewController {
             expression.append(buttonText!)
             print(expression)
         }
+        
+       
     
     }
     
@@ -161,11 +170,13 @@ class ViewController: UIViewController {
         if(expression.last == "+" || expression.last == "-" || expression.last == "x" || expression.last == "÷")
         {
             expression.removeLast()
-            print(expression)
+            
             CalculationLabel.text!.removeLast()
         }
         try! ResultLabel.text = ExpressionEvaluator.Evaluate(expression: expression, radianValues: rad, secondOperation: second)
         ResultLabelLandscape.text = ResultLabel.text
+        
+        print(expression)
     }
     
     
@@ -180,7 +191,8 @@ class ViewController: UIViewController {
         let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabel.text?.last.map(String.init)
         
-        if (lastCharacter == "%" || lastCharacter == "±")
+    
+        if ((lastCharacter == "%" || lastCharacter == "±"))
         {
             return
         }
@@ -196,7 +208,9 @@ class ViewController: UIViewController {
                 {
                     CalculationLabel.text?.append(buttonText!)
                     CalculationLabelLandscape.text?.append(buttonText!)
+                    expression+="."
                 }
+                
             }
         default:
             //fixing the 0 at the beggining of the number (07 -> 7)
@@ -211,12 +225,31 @@ class ViewController: UIViewController {
                 return
             }
             
-            CalculationLabel.text?.append(buttonText!)
-            CalculationLabelLandscape.text?.append(buttonText!)
-            expression.append(buttonText!)
+            if(numAllowed() ) {
+                CalculationLabel.text?.append(buttonText!)
+                CalculationLabelLandscape.text?.append(buttonText!)
+                expression.append(buttonText!)
+            }
+            
+//            CalculationLabel.text?.append(buttonText!)
+//            CalculationLabelLandscape.text?.append(buttonText!)
+//            expression.append(buttonText!)
         }
         print(expression)
         
+    }
+    
+    
+    func numAllowed() -> Bool
+    {
+        let lastCharacter = CalculationLabel.text?.last.map(String.init)
+        if((lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" ) || lastCharacter == "." || (isOperationAllowed() && lastCharacter != ")" ) || lastCharacter == "(" || lastCharacter == "^" || lastCharacter == "E" || lastCharacter == "q") {
+            return true
+        }
+        
+        else {
+            return false
+        }
     }
     
     
@@ -318,7 +351,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("o")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -357,7 +390,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("k")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -398,7 +431,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("j")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -439,7 +472,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("i")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -478,7 +511,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("h")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -517,7 +550,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "±")
+        if(lastCharacter == "±" || lastCharacter == ")")
         {
             expression.append("g")
             CalculationLabelLandscape.text?.append(buttonText!)
@@ -540,7 +573,22 @@ class ViewController: UIViewController {
     //Event handlers when x! button is pressed
     @IBAction func factorialButtonPressed(_ sender: UIButton)
     {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
         
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if ((numbers != nil) || lastCharacter == ")" )
+        {
+           expression.append("!")
+           CalculationLabelLandscape.text?.append("!")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
     }
     
     
@@ -555,11 +603,14 @@ class ViewController: UIViewController {
        
         if(CalculationLabelLandscape.text == "0")
         {
-           return
+            expression.append("(")
+            CalculationLabelLandscape.text?.removeLast()
+            CalculationLabelLandscape.text?.append(buttonText!)
+            CalculationLabel.text = CalculationLabelLandscape.text
         }
 
         //let numbers = (Int(lastCharacter!))
-        if (lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%")
+        if (lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "E")
         {
            expression.append("(")
            CalculationLabelLandscape.text?.append(buttonText!)
@@ -583,7 +634,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "±")
+        if(lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "x" || lastCharacter == "÷" || lastCharacter == "%" || lastCharacter == "E")
         {
             return
         }
@@ -612,6 +663,13 @@ class ViewController: UIViewController {
             return
         }
         
+        if(lastCharacter == ")")
+        {
+            expression.append("√")
+            CalculationLabelLandscape.text?.append(buttonText!)
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
         let numbers = (Int(lastCharacter!))
         if (numbers != nil)
         {
@@ -628,8 +686,6 @@ class ViewController: UIViewController {
     
     @IBAction func squareNumberBttnPressed(_ sender: UIButton)
     {
-        let button = sender as UIButton
-        let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
         
         if(CalculationLabelLandscape.text == "0")
@@ -656,8 +712,6 @@ class ViewController: UIViewController {
     
     @IBAction func cubeNumberBttnPressed(_ sender: UIButton)
     {
-        let button = sender as UIButton
-        let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
         
         if(CalculationLabelLandscape.text == "0")
@@ -678,10 +732,8 @@ class ViewController: UIViewController {
     
     
     //event handlers for y root button pressed
-    @IBAction func yRootBttnPressed(_ sender: UIButton)
+    @IBAction func yBttnPressed(_ sender: UIButton)
     {
-        let button = sender as UIButton
-        let buttonText = button.titleLabel?.text
         let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
         
         if(CalculationLabelLandscape.text == "0")
@@ -742,6 +794,232 @@ class ViewController: UIViewController {
         print(second)
     }
     
+    
+    
+    //event handlers when e^x button is pressed
+    @IBAction func expBttnPressed(_ sender: UIButton)
+    {
+
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            expression.append("0d")
+            CalculationLabelLandscape.text?.append("'e^")
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != 0 )
+        {
+           expression.append("d")
+           CalculationLabelLandscape.text?.append("'e^")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+   
+    }
+    
+    
+    
+    //event handler when exp button is pressed
+    @IBAction func exponBttnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if ((numbers != nil) || lastCharacter == ")" )
+        {
+           expression.append("e")
+           CalculationLabelLandscape.text?.append("e")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    //event handlers when 10^x button is pressed
+    @IBAction func powerofTenBttnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            expression.append("0c")
+            CalculationLabelLandscape.text?.append("'10^")
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != 0 )
+        {
+           expression.append("c")
+           CalculationLabelLandscape.text?.append("'10^")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    //event handlers when cube root button is pressed
+    
+    @IBAction func cubeRootBttnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+            expression.append("a")
+            CalculationLabelLandscape.text?.append("∛")
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
+        print(expression)
+        
+    }
+    
+    //event handlers for y root button pressed ( not finished )
+    
+    @IBAction func yRootBttnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+            expression.append("z")
+            CalculationLabelLandscape.text?.append("sq")
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
+        print(expression)
+    }
+    
+    //event handlers for ln button pressed
+    
+    @IBAction func lnButtonPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if ((numbers != nil) || lastCharacter == ")" )
+        {
+           expression.append("l")
+           CalculationLabelLandscape.text?.append("ln")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    //event handlers for log button pressed
+    
+    @IBAction func logButtonPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if ((numbers != nil) || lastCharacter == ")" )
+        {
+           expression.append("t")
+           CalculationLabelLandscape.text?.append("log")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    //event handlers for EE button pressed
+    
+    @IBAction func EEtnnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if ((numbers != nil) || lastCharacter == ")" )
+        {
+           expression.append("E")
+           CalculationLabelLandscape.text?.append("E")
+           CalculationLabel.text = CalculationLabelLandscape.text
+        }
+    
+        print(expression)
+    }
+    
+    
+    
+    //event handlers for 1/x button pressed
+    @IBAction func divideByXBttnPressed(_ sender: UIButton)
+    {
+        let lastCharacter = CalculationLabelLandscape.text?.last.map(String.init)
+        
+        if(CalculationLabelLandscape.text == "0")
+        {
+            return
+        }
+        
+        let numbers = (Int(lastCharacter!))
+        if (numbers != nil)
+        {
+            expression.append("f")
+            CalculationLabelLandscape.text?.append("dv")
+            CalculationLabel.text = CalculationLabelLandscape.text
+        }
+        
+        print(expression)
+    }
+    
+    
+    
+    func getAmountofCharacters(lastOperation: Character) -> Int {
+            
+            if lastOperation == Character("m") || lastOperation == Character("n") || lastOperation == Character("q") || lastOperation == Character("r") || lastOperation == Character("s") || lastOperation == Character("b") || lastOperation == Character("l") || lastOperation == Character("z") || lastOperation == Character("f") {
+                return 2
+            }
+            if lastOperation == Character("g") || lastOperation == Character("h") || lastOperation == Character("i") || lastOperation == Character("t") || lastOperation == Character("d"){
+                return 3
+            }
+            if lastOperation == Character("j") || lastOperation == Character("k") || lastOperation == Character("o") || lastOperation == Character("c"){
+                return 4
+            }
+            
+            return 1
+        }
 }
 
 
